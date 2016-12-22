@@ -1,0 +1,79 @@
+/* Dropdown Button */
+.s3dropbtn {
+	background-color: #E56113;
+	color: white;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+	position: absolute;
+	top: 431px;
+	left: 668px;
+	z-index: 2;
+	font-family: courier-prime;
+	font-style: normal;
+	font-weight: 400;
+	border-radius: 15px;
+	-webkit-box-shadow: 2px 2px 5px rgba(0,0,0,1.00);
+	box-shadow: 2px 2px 5px rgba(0,0,0,1.00);
+	max-width: 187px;
+	width: 183px;
+	height: 55px;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.s3dropdown {
+	display: inline-block;
+	position: absolute;
+	top: 90px;
+	}
+
+/* Dropdown Content (Hidden by Default) */
+.s3dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 200px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	top: 480px;
+	left: 668px;
+	right: 62px;
+	z-index: 1;
+}
+
+/* Links inside the dropdown */
+.s3dropdown-content a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	font-family: courier-prime;
+	font-style: normal;
+	font-weight: 400;
+}
+
+/* Change color of dropdown links on hover */
+.s3dropdown-content a:hover {
+	background-color: #F5F3AF
+}
+
+/* Show the dropdown menu on hover */
+.s3dropdown:hover .s3dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.s3dropdown:hover .s3dropbtn {
+	background-color: #923E0C;
+}
+@media only screen and (max-width : 1000px) {
+.s3dropbtn {
+	position: absolute;
+	left: 424px;
+	top: 375px;
+}
+.s3dropdown-content {
+	position: absolute;
+	left: 608px;
+	top: 387px;
+}
+}

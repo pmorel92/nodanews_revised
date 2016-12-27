@@ -1,0 +1,42 @@
+
+#logo {
+	width: 171px;
+	height: 80px;
+	position: absolute;
+	top: 6px;
+	left: 0px;
+}
+#banner {
+	width: 100%;
+	position: absolute;
+	top: 86px;
+	left: 0px;
+}
+#node_dir {
+	color: #000000;
+	font-family: Century;
+	text-decoration: none;
+	position: absolute;
+	top: 32px;
+	left: 23%;
+	font-size: x-large;
+}
+#media_dir {
+	color: #000000;
+	font-family: Century;
+	text-decoration: none;
+	position: absolute;
+	top: 32px;
+	left: 53%;
+	font-size: x-large;
+}
+#about {
+	color: #000000;
+	font-family: Century;
+	text-decoration: none;
+	position: absolute;
+	top: 32px;
+	left: 87%;
+	font-size: x-large;
+	min-width: 223px;
+}

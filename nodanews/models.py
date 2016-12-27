@@ -21,7 +21,7 @@ class Node(models.Model):
 	headline = models.CharField(max_length=200, default='')
 	date_posted = models.DateTimeField()
 	my_take = models.TextField()
-	node_image = models.ImageField(upload_to='images')
+	node_image = models.ImageField(upload_to='static/images')
 	Link_1 = models.CharField(max_length=500, default='')
 	Link_1_title = models.CharField(max_length=200, default='')
 	Link_2 = models.CharField(max_length=500, default='')

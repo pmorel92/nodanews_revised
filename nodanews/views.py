@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 
 # Create your views here.
 
@@ -15,8 +15,7 @@ def node_dir(request):
 def media_dir(request):
 	return render(request, 'nodanews/media_dir.html', {})
 	
-def node(request, node_dir_id, node_id):
-	list = get_object_or_404(Node_Dir, pk=node_dir_id)
+def node(request, node_id):
 	node = get_object_or_404(Node, pk=node_id)
 	return render(request, 'nodanews/node.html', {'node': list})
 

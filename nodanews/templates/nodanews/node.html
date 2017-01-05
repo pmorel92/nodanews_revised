@@ -3,29 +3,46 @@
 <head>
 <meta charset="utf-8">
 <title>Noda News</title>
-<link href="../../static/css_style_sheets/nav.css" rel="stylesheet" type="text/css">
-<link href="../../static/css_style_sheets/node.css" rel="stylesheet" type="text/css">
+<link href="/static/css_style_sheets/nav.css" rel="stylesheet" type="text/css">
+<link href="/static/css_style_sheets/node.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
 	<header>
 		<nav>
-			<a href="www.nodanews.com"><img src="../../static/images/elements/nn_logo_horizontal.svg" alt="" id="logo"/></a> 
-			<a href="www.nodanews.com/node_dir"><p id="node_dir">Node Directory</p></a>
+			<a href="www.nodanews.com"><img src="/static/images/elements/nn_logo_horizontal.svg" alt="" id="logo"/></a>
+			<img src="/static/images/elements/Nav_menu-01.png" id="nav_menu" alt=""/> 
+   			<a href="www.nodanews.com/node_dir"><p id="node_dir">Node Directory</p></a>
     		<a href="www.nodanews.com/media_dir"><p id="media_dir">Media Org. Directory</p></a>
     		<a href="www.nodanews.com/about"><p id="about">About Noda News</p></a>
 	    </nav>
-    <img src="../../static/images/elements/banner_red.svg" alt="" id="banner"/> 
-    </header>		
+    <img src="/static/images/elements/banner_red.svg" alt="" id="banner"/> 
+    </header>
+	{% block primary %}
 	<div>
-	  <p id="headline">{{Node.headline}}</p>
+	  <p id="headline">{{node.headline}}</p>
 	</div>
 	<div>
-    <img src="{{Node.node_image}}" id="node_img" alt=""/>
-    </div>
+    <img src="../../static/images/nodes/Ivory-coast-constituion-01-01.png" id="node_img" alt=""/> </div>
     <div>
-		<p id="my_take">{{Node.my_take}}</p>
+		<p id="my_take">{{node.my_take}}</p>
 	</div>
+	<div>
+	  <ul class="link_list">
+			<a href="{{Link_1}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{Link_1_title}}</li></a>
+			<a href="{{Link_2}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{Link_2_title}}</li></a>
+			<a href="{{Link_3}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{Link_3_title}}</li></a>
+			<a href="{{Link_4}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{Link_4_title}}</li></a>
+			<a href="{{Link_5}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{Link_5_title}}</li></a>
+			<a href="{{Link_6}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{Link_6_title}}</li></a>
+			<a href="{{Link_7}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{Link_7_title}}</li></a>
+			<a href="{{Link_8}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{Link_8_title}}</li></a>
+			<a href="{{Link_9}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{Link_9_title}}</li></a>
+			<a href="{{Link_10}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{Link_10_title}}</li></a>
+		</ul>
+	</div>
+{% endblock %}
+   
     
 
 </body>

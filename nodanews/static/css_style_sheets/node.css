@@ -1,0 +1,37 @@
+@charset "utf-8";
+#headline {
+	position: absolute;
+	top: 149px;
+	left: 579px;
+	font-family: Century;
+	font-size: xx-large;
+}
+#node_img {
+	width: 674px;
+	height: 808px;
+	position: absolute;
+	top: 240px;
+	left: 375px;
+	opacity: 0.37;
+}
+#my_take {
+	width: 600px;
+	position: absolute;
+	top: 215px;
+	left: 510px;
+	font-family: Century;
+}
+.link_list {
+	position: absolute;
+	top: 233px;
+	left: 3%;
+	background-color: #F91219;
+	-webkit-box-shadow: 2px 2px 10px 1px #000000;
+	box-shadow: 2px 2px 10px 1px #000000;
+	width: 253px;
+	min-width: 253px;
+	border-radius: 34px;
+}
+a li:hover {
+	color: gold
+}

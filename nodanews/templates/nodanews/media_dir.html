@@ -4,19 +4,34 @@
 <meta charset="utf-8">
 <title>Noda News</title>
 <link href="../../static/css_style_sheets/nav.css" rel="stylesheet" type="text/css">
+<link href="../../static/css_style_sheets/media_dir.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
 	<header>
 		<nav>
 			<a href="www.nodanews.com"><img src="../../static/images/elements/nn_logo_horizontal.svg" alt="" id="logo"/></a> 
+			<img src="/static/images/elements/Nav_menu-01.png" id="nav_menu" alt=""/>
 			<a href="www.nodanews.com/node_dir"><p id="node_dir">Node Directory</p></a>
     		<a href="www.nodanews.com/media_dir"><p id="media_dir">Media Org. Directory</p></a>
     		<a href="www.nodanews.com/about"><p id="about">About Noda News</p></a>
 	    </nav>
     <img src="../../static/images/elements/banner_blue.svg" alt="" id="banner"/> 
     </header>		
-
-
+	<div>
+	  <h1 id="title">Media Organization Directory</h1>
+	</div>
+{% block primary %}	
+	<div>	
+		<ul class="media_list">
+			{% for media_org in media_orgs %}
+				<li>
+					<a href="{{media_org.home_page}} " style="text-decoration:none; color: #000000" target="_blank"><h2>{{media_org.name}}</h2></a>
+					<a href="{{media_org.home_page}}" target="_blank"><img src="../../static/images/logos/Cnn.svg.png" width="2000" height="960" alt="" class="media_org_logo"/></a>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+{% endblock %}
 </body>
 </html>

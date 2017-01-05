@@ -4,19 +4,35 @@
 <meta charset="utf-8">
 <title>Noda News</title>
 <link href="../../static/css_style_sheets/nav.css" rel="stylesheet" type="text/css">
+<link href="../../static/css_style_sheets/node_dir.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
 	<header>
 		<nav>
-			<a href="www.nodanews.com"><img src="../../static/images/elements/nn_logo_horizontal.svg" alt="" id="logo"/></a> 
+			<a href="www.nodanews.com"><img src="../../static/images/elements/nn_logo_horizontal.svg" alt="" id="logo"/></a>
+			<img src="/static/images/elements/Nav_menu-01.png" id="nav_menu" alt=""/>
 			<a href="www.nodanews.com/node_dir"><p id="node_dir">Node Directory</p></a>
     		<a href="www.nodanews.com/media_dir"><p id="media_dir">Media Org. Directory</p></a>
     		<a href="www.nodanews.com/about"><p id="about">About Noda News</p></a>
 	    </nav>
     <img src="../../static/images/elements/banner_red.svg" alt="" id="banner"/> 
-    </header>		
-
+    </header>
+  	<div>
+	  <h1 id="title">Node Directory</h1>
+	</div>  		
+{% block primary %}	
+	<div>	
+		<ul class="node_list">
+			{% for node in nodes %}
+				<li>
+					<a href="nodes/{{node.node_id}}" target="_blank" style="text-decoration:none; color: #000000"><h2>{{node.headline}}</h2></a>
+					<a href="nodes/{{node.node_id}}" target="_blank"><img src="../../static/images/nodes/Ivory-coast-constituion-01-01.png" width="1850" height="2225" alt=""/ class="node_img"></a>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+{% endblock %}
 
 </body>
 </html>

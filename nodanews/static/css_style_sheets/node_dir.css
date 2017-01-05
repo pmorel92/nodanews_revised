@@ -30,3 +30,6 @@
 li:hover .node_img {
 	display: block
 }
+a :hover {
+	color: gold
+}

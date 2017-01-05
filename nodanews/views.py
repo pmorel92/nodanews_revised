@@ -9,8 +9,10 @@ from .models import Node_Dir, Media_Dir, Node, Media_Org, Index
 
 def index(request):
 	index = get_object_or_404(Index)
+	node_dirs = Node.objects.order_by('date_posted')[0:3]
+	media_dirs = Media_Org.objects.order_by('date_posted')[0:3]
 	t = get_template('nodanews/index.html')
-	html = t.render(Context({'index': index}))
+	html = t.render(Context({'index': index}, {'node_dirs': node_dirs}, {'media_dirs': media_dirs}))
 	return HttpResponse(html)
 
 def node_dir(request):

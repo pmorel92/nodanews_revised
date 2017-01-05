@@ -11,17 +11,24 @@
 	<header>
 		<nav>
 			<a href="www.nodanews.com"><img src="../../static/images/elements/nn_logo_horizontal.svg" alt="" id="logo"/></a>
-			<img src="/static/images/elements/Nav_menu-01.png" id="nav_menu" alt=""/>
 			<a href="www.nodanews.com/node_dir"><p id="node_dir">Node Directory</p></a>
     		<a href="www.nodanews.com/media_dir"><p id="media_dir">Media Org. Directory</p></a>
     		<a href="www.nodanews.com/about"><p id="about">About Noda News</p></a>
+    		    		<div class="nav_menu_dropdown">		
+   				<img src="/static/images/elements/Nav_menu-01.png" class="nav_menu" alt=""/>
+   				<div class="nav-content">
+					<a href="http://www.nodanews.com/node_dir">Node Directory</a>
+					<a href="http://www.nodanews.com/media_dir">Media Org. Directory</a>
+					<a href="http://www.nodanews.com/about">About Noda News</a>
+				</div>
+			</div>
 	    </nav>
     <img src="../../static/images/elements/banner_red.svg" alt="" id="banner"/> 
     </header>
   	<div>
-	  <h1 id="title">Node Directory</h1>
+		<h1 id="title">Node Directory</h1>
 	</div>  		
-{% block primary %}	
+	
 	<div>	
 		<ul class="node_list">
 			{% for node in nodes %}
@@ -32,7 +39,5 @@
 			{% endfor %}
 		</ul>
 	</div>
-{% endblock %}
-
 </body>
 </html>

@@ -58,6 +58,13 @@ class Node(models.Model):
 	Link_9_title = models.CharField(max_length=200, default='', blank=True)
 	Link_10 = models.CharField(max_length=500, default='', blank=True)
 	Link_10_title = models.CharField(max_length=200, default='', blank=True)
+	video_1 = models.CharField(max_length=500, default='', blank=True)
+	video_1_title = models.CharField(max_length=200, default='', blank=True)
+	video_2 = models.CharField(max_length=500, default='', blank=True)
+	video_2_title = models.CharField(max_length=200, default='', blank=True)
+	video_3 = models.CharField(max_length=500, default='', blank=True)
+	video_3_title = models.CharField(max_length=200, default='', blank=True)
+	video_embed = models.CharField(max_length=500, default='', blank=True)
 	node_dir = models.ForeignKey(Node_Dir)
 	
 	def __str__(self):
@@ -65,12 +72,14 @@ class Node(models.Model):
 
 class Media_Org(models.Model):
 	name = models.CharField(max_length=100, default='')
+	date_posted = models.DateTimeField()
 	home_page = models.CharField(max_length=200, default='')
-	date_founded = models.DateField()
+	date_founded = models.DateField(default='1965-08-08')
 	logo = models.ImageField(upload_to='nodanews/static/images/logos')
 	description = models.TextField()
 	media_dir = models.ForeignKey(Media_Dir)
-	fake_or_not = models.BooleanField()
+	fake_or_not = models.BooleanField(default=False)
+	
 	
 	def __str__(self):
 		return self.name

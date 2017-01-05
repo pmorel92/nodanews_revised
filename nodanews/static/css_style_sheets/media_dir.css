@@ -19,6 +19,10 @@
 	box-shadow: 3px 3px 9px 1px #524F4F;
 
 }
+a :hover {
+	color: gold
+}
+
 .media_org_logo {
 	float: left;
 	width: 200px;

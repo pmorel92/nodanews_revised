@@ -29,31 +29,62 @@
 	  <p id="headline">{{node.headline}}</p>
 	</div>
 	<div>
-    <img src="../../static/images/nodes/Ivory-coast-constituion-01-01.png" id="node_img" alt=""/> </div>
+    <img src="{{node.node_image}}" id="node_img" alt=""/> </div>
     <div>
 		<p id="my_take">{{node.my_take}}</p>
 	</div>
 	<div>
+		<h2 id="sources">Sources</h2>
 	  <ul class="link_list" style="list-style-type: none">
-			<a href="{{Link_1}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{Link_1_title}}</li></a>
-			<a href="{{Link_2}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{Link_2_title}}</li></a>
-			<a href="{{Link_3}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{Link_3_title}}</li></a>
-			<a href="{{Link_4}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{Link_4_title}}</li></a>
-			<a href="{{Link_5}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{Link_5_title}}</li></a>
-			<a href="{{Link_6}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{Link_6_title}}</li></a>
-			<a href="{{Link_7}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{Link_7_title}}</li></a>
-			<a href="{{Link_8}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{Link_8_title}}</li></a>
-			<a href="{{Link_9}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{Link_9_title}}</li></a>
-			<a href="{{Link_10}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{Link_10_title}}</li></a>
+			<a href="{{node.Link_1}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{node.Link_1_title}}</li></a>
+			<a href="{{node.Link_2}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{node.Link_2_title}}</li></a>
+			<a href="{{node.Link_3}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{node.Link_3_title}}</li></a>
+			<a href="{{node.Link_4}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{node.Link_4_title}}</li></a>
+			<a href="{{node.Link_5}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{node.Link_5_title}}</li></a>
+			<a href="{{node.Link_6}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{node.Link_6_title}}</li></a>
+			<a href="{{node.Link_7}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{node.Link_7_title}}</li></a>
+			<a href="{{node.Link_8}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{node.Link_8_title}}</li></a>
+			<a href="{{node.Link_9}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{node.Link_9_title}}</li></a>
+			<a href="{{node.Link_10}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{node.Link_10_title}}</li></a>
 		</ul>
 	</div>
 	<div>
+		<h2 id="wikipedia">Wikipedia</h2>
+			<ul class="wikipedia_list" style="list-style-type: none">
+				<a href="{{node.wiki_link_1}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{node.wiki_link_1_title}}</li></a>
+				<a href="{{node.wiki_link_2}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{node.wiki_link_2_title}}</li></a>
+				<a href="{{node.wiki_link_3}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{node.wiki_link_3_title}}</li></a>
+				<a href="{{node.wiki_link_4}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{node.wiki_link_4_title}}</li></a>
+				<a href="{{node.wiki_link_5}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{node.wiki_link_5_title}}</li></a>
+			</ul>	
+	</div>
+	<div>
+		<h2 id="academic">Academic</h2>
+			<ul class="academic_list" style="list-style-type: none">
+				<a href="{{node.academic_link_1}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{node.academic_link_title_1}}</li></a>
+				<a href="{{node.academic_link_2}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{node.academic_link_title_2}}</li></a>
+				<a href="{{node.academic_link_3}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{node.academic_link_title_3}}</li></a>
+				<a href="{{node.academic_link_4}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{node.academic_link_title_4}}</li></a>
+				<a href="{{node.academic_link_5}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{node.academic_link_title_5}}</li></a>
+			</ul>	
+	</div>
+	<div>
+		<h2 id="nodes_title">Related Nodes</h2>
+			<ul class="node_list" style="list-style-type: none">
+				<a href="{{node.node_link_1}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{node.node_link_title_1}}</li></a>
+				<a href="{{node.node_link_2}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{node.node_link_title_2}}</li></a>
+				<a href="{{node.node_link_3}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{node.node_link_title_3}}</li></a>
+				<a href="{{node.node_link_4}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{node.node_link_title_4}}</li></a>
+				<a href="{{node.node_link_5}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{node.node_link_title_5}}</li></a>
+			</ul>	
+	</div>
+	<div>
 		<h2 id="video">Video</h2>
-		<p id="video_embed">{{video_embed}}</p>
+		<iframe id="video_embed" width="420" height="236" src="{{node.video_embed}}" frameborder="0" allowfullscreen></iframe>
 		<ul id="video_list" style="list-style-type: none">
-			<a href="{{video_1}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{video_1_title}}</li></a>
-			<a href="{{video_2}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{video_2_title}}</li></a>
-			<a href="{{video_3}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{video_3_title}}</li></a>
+			<a href="{{node.video_1}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{node.video_1_title}}</li></a>
+			<a href="{{node.video_2}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{node.video_2_title}}</li></a>
+			<a href="{{node.video_3}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{node.video_3_title}}</li></a>
 		</ul>
 	</div>   
     

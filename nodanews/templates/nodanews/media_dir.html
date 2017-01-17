@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <title>Noda News</title>
-<link href="../../static/css_style_sheets/nav.css" rel="stylesheet" type="text/css">
-<link href="../../static/css_style_sheets/media_dir.css" rel="stylesheet" type="text/css">
+<link href="/static/css_style_sheets/nav.css" rel="stylesheet" type="text/css">
+<link href="/static/css_style_sheets/media_dir.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
 	<header>
 		<nav>
-			<a href="www.nodanews.com"><img src="../../static/images/elements/nn_logo_horizontal.svg" alt="" id="logo"/></a> 
+			<a href="www.nodanews.com"><img src="/static/images/elements/nn_logo_horizontal.svg" alt="" id="logo"/></a> 
 			<a href="www.nodanews.com/node_dir"><p id="node_dir">Node Directory</p></a>
     		<a href="www.nodanews.com/media_dir"><p id="media_dir">Media Org. Directory</p></a>
     		<a href="www.nodanews.com/about"><p id="about">About Noda News</p></a>
@@ -23,22 +23,46 @@
 				</div>
 			</div>
 	    </nav>
-    <img src="../../static/images/elements/banner_blue.svg" alt="" id="banner"/> 
+    <img src="/static/images/elements/banner_blue.svg" alt="" id="banner"/> 
     </header>		
 	<div>
-	  <h1 id="title">Media Organization Directory</h1>
+	  	<h1 id="title">Media Organization Directory</h1>	
+		<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Media Org. names..">	
 	</div>
 	{% block primary %}
 	<div>	
-		<ul class="media_list">
-			{% for media_org in media_orgs %}
-				<li>
-					<a href="{{media_org.home_page}} " style="text-decoration:none; color: #000000" target="_blank"><h2>{{media_org.name}}</h2></a>
-					<a href="{{media_org.home_page}}" target="_blank"><img src="../../static/images/logos/Cnn.svg.png" width="2000" height="960" alt="" class="media_org_logo"/></a>
-				</li>
-			{% endfor %}
+		<ul id="media_list">	
+		{% for media_org in media_orgs %}
+			
+					<li style="list-style-type: none">
+							<a href="{{media_org.id}}" style="text-decoration:none; color: #000000" target="_blank"><h2>{{media_org.name}}</h2></a>
+							<h3 style="font-style: italic; font-weight: bold">{{media_org.bias}}/{{media_org.country}}</h3>
+					</li>	
+			
+		{% endfor %}
 		</ul>
 	</div>
-	{% endblock %}
+	
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById('myInput');
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("media_list");
+    li = ul.getElementsByTagName('li');
+
+   
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+		{% endblock %}
 </body>
 </html>

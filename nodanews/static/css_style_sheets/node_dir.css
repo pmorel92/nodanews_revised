@@ -3,33 +3,51 @@
 	position: absolute;
 	top: 136px;
 	font-family: Century;
-	left: 25%;
+	left: 15%;
 }
-.node_list {
+#node_list {
 	position: absolute;
-	top: 201px;
+	top: 250px;
 	background-image: -webkit-linear-gradient(178deg,rgba(236,43,43,1.00) 0%,rgba(224,88,88,1.00) 100%);
 	background-image: -moz-linear-gradient(178deg,rgba(236,43,43,1.00) 0%,rgba(224,88,88,1.00) 100%);
 	background-image: -o-linear-gradient(178deg,rgba(236,43,43,1.00) 0%,rgba(224,88,88,1.00) 100%);
 	background-image: linear-gradient(272deg,rgba(236,43,43,1.00) 0%,rgba(224,88,88,1.00) 100%);
-	left: 25%;
+	left: 14%;
 	border-radius: 15px;
 	list-style-type: none;
 	-webkit-box-shadow: 3px 3px 9px 1px #524F4F;
 	box-shadow: 3px 3px 9px 1px #524F4F;
 }
-.node_img{
-	float: left;
-	width: 184px;
-	height: 222px;
-	position: absolute;
-	left: -228px;
-	display: none;
-	top: 0%;
-}
-li:hover .node_img {
-	display: block
-}
 a :hover {
 	color: gold
 }
+#myInput {
+	background-image: url('/css/searchicon.png');
+	background-position: 10px 12px;
+	background-repeat: no-repeat;
+	font-size: 16px;
+	padding: 12px 20px 12px 40px;
+	border: 1px solid #ddd;
+	margin-bottom: 12px;
+	position: absolute;
+	top: 201px;
+	left: 15%;
+	width: 281px;
+}
+
+@media only screen and (max-width : 1000px) {
+	#title {
+	position: absolute;
+	top: 163px;
+}
+	#node_list {
+	position: absolute;
+	top: 275px;
+	left: 11%;
+}
+	#myInput{
+	position: absolute;
+	left: 11%;
+	top: 235px;
+	}	
+	}

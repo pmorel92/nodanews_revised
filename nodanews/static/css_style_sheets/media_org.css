@@ -5,6 +5,7 @@
 	position: absolute;
 	top: 152px;
 	left: 30%;
+	min-width: 200px;
 }
 
 #media_org_logo {
@@ -16,8 +17,8 @@
 #description {
 	width: 600px;
 	position: absolute;
-	top: 215px;
-	left: 35%;
+	top: 249px;
+	left: 30%;
 	font-family: Century;
 }
 #date_founded{

@@ -3,35 +3,63 @@
 	position: absolute;
 	top: 136px;
 	font-family: Century;
-	left: 25%;
+	left: 15%;
 }
-.media_list {
+#media_list {
 	position: absolute;
-	top: 201px;
+	top: 250px;
 	background-image: -webkit-linear-gradient(178deg,rgba(173,224,232,1.00) 0%,rgba(0,195,255,1.00) 100%);
 	background-image: -moz-linear-gradient(178deg,rgba(173,224,232,1.00) 0%,rgba(0,195,255,1.00) 100%);
 	background-image: -o-linear-gradient(178deg,rgba(173,224,232,1.00) 0%,rgba(0,195,255,1.00) 100%);
 	background-image: linear-gradient(272deg,rgba(173,224,232,1.00) 0%,rgba(0,195,255,1.00) 100%);
-	left: 25%;
+	left: 14%;
 	border-radius: 15px;
 	list-style-type: none;
 	-webkit-box-shadow: 3px 3px 9px 1px #524F4F;
 	box-shadow: 3px 3px 9px 1px #524F4F;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	margin-top: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px;
 
 }
+
 a :hover {
 	color: gold
 }
 
-.media_org_logo {
-	float: left;
-	width: 200px;
-	height: 100px;
+#myInput {
+	background-image: url('/css/searchicon.png');
+	background-position: 10px 12px;
+	background-repeat: no-repeat;
+	font-size: 16px;
+	padding: 12px 20px 12px 40px;
+	border: 1px solid #ddd;
+	margin-bottom: 12px;
 	position: absolute;
-	left: -203px;
-	top: 0%;
-	display: none;
+	top: 201px;
+	left: 15%;
+	width: 281px;
 }
-li:hover .media_org_logo {
-	display: block
+
+
+@media only screen and (max-width : 1000px) {
+#title {
+	position: absolute;
+	top: 163px;
 }
+#media_list {
+	position: absolute;
+	top: 275px;
+	left: 11%;
+}
+	#myInput{
+	position: absolute;
+	left: 11%;
+	top: 235px;
+	}	
+	}

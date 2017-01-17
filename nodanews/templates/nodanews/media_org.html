@@ -29,19 +29,19 @@
 	  <p id="name">{{media_org.name}}</p>
 	</div>
 	<div>
-		<a href="{{media_org.home_page}}"><img src="../../static/images/logos/BBC_News.svg.png" id="media_org_logo" alt=""/></a>
+		<a href="{{media_org.home_page}}"><img src="media_org.logo" id="media_org_logo" alt=""/></a>
 	</div>
 	<div>
-	  <p id="date_founded">Date Founded: {{date_founded}}</p>
+	  <p id="date_founded">Date Founded: {{media_org.date_founded}}</p>
 	</div>
 <div>
 		<p id="description">{{media_org.description}}</p>
 	</div>	
 	<div>
-		{% if fake_or_not %}
-		  <img src="../../static/images/elements/fake.png" id="fake" alt=""/> 
+		{% if media_org.fake_or_not %}
+		  <img src="/static/images/elements/fake.png" id="fake" alt=""/> 
 		
-	{% endif %} 
+		{% endif %} 
 	</div>
 </body>
 </html>

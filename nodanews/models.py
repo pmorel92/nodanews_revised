@@ -9,32 +9,37 @@ class Index(models.Model):
 	Link_2_title = models.CharField(max_length=200, default='', blank=True)
 	Link_3 = models.CharField(max_length=500, default='', blank=True)
 	Link_3_title = models.CharField(max_length=200, default='', blank=True)
-	Link_4 = models.CharField(max_length=500, default='', blank=True)
-	Link_4_title = models.CharField(max_length=200, default='', blank=True)
-	Link_5 = models.CharField(max_length=500, default='', blank=True)
-	Link_5_title = models.CharField(max_length=200, default='', blank=True)
+	headline_2 = models.CharField(max_length=200, default='', blank=True)
+	Link_21 = models.CharField(max_length=500, default='', blank=True)
+	Link_21_title = models.CharField(max_length=200, default='', blank=True)
+	Link_22 = models.CharField(max_length=500, default='', blank=True)
+	Link_22_title = models.CharField(max_length=200, default='', blank=True)
+	Link_23 = models.CharField(max_length=500, default='', blank=True)
+	Link_23_title = models.CharField(max_length=200, default='', blank=True)
+	headline_3 = models.CharField(max_length=200, default='', blank=True)
+	Link_31 = models.CharField(max_length=500, default='', blank=True)
+	Link_31_title = models.CharField(max_length=200, default='', blank=True)
+	Link_32 = models.CharField(max_length=500, default='', blank=True)
+	Link_32_title = models.CharField(max_length=200, default='', blank=True)
+	Link_33 = models.CharField(max_length=500, default='', blank=True)
+	Link_33_title = models.CharField(max_length=200, default='', blank=True)
+	headline_4 = models.CharField(max_length=200, default='', blank=True)
+	Link_41 = models.CharField(max_length=500, default='', blank=True)
+	Link_41_title = models.CharField(max_length=200, default='', blank=True)
+	Link_42 = models.CharField(max_length=500, default='', blank=True)
+	Link_42_title = models.CharField(max_length=200, default='', blank=True)
+	Link_43 = models.CharField(max_length=500, default='', blank=True)
+	Link_43_title = models.CharField(max_length=200, default='', blank=True)
+	index_image = models.ImageField(upload_to='nodanews/static/images/index')
 	
 	def __str__(self):
 		return self.headline
 	
-class Node_Dir(models.Model):
-	title = models.CharField(max_length=100, default='country/subject')
-	subject = models.CharField(max_length=100, default='')
-	country = models.CharField(max_length=100, default='')
-
-	def __str__(self):
-		return self.title
-	
-class Media_Dir(models.Model):
-	title = models.CharField(max_length=100, default='country/bias')
-	bias = models.CharField(max_length=100, default='')	
-	country = models.CharField(max_length=100, default='')
-	
-	def __str__(self):
-		return self.title
 		
 class Node(models.Model):
 	headline = models.CharField(max_length=200, default='')
+	subject = models.CharField(max_length=100, default='')
+	country = models.CharField(max_length=100, default='')
 	date_posted = models.DateTimeField()
 	my_take = models.TextField()
 	node_image = models.ImageField(upload_to='nodanews/static/images/nodes')
@@ -58,6 +63,36 @@ class Node(models.Model):
 	Link_9_title = models.CharField(max_length=200, default='', blank=True)
 	Link_10 = models.CharField(max_length=500, default='', blank=True)
 	Link_10_title = models.CharField(max_length=200, default='', blank=True)
+	wiki_link_1 = models.CharField(max_length=500, default='', blank=True)
+	wiki_link_1_title = models.CharField(max_length=200, default='', blank=True)
+	wiki_link_2 = models.CharField(max_length=500, default='', blank=True)
+	wiki_link_2_title = models.CharField(max_length=200, default='', blank=True)
+	wiki_link_3 = models.CharField(max_length=500, default='', blank=True)
+	wiki_link_3_title = models.CharField(max_length=200, default='', blank=True)
+	wiki_link_4 = models.CharField(max_length=500, default='', blank=True)
+	wiki_link_4_title = models.CharField(max_length=200, default='', blank=True)
+	wiki_link_5 = models.CharField(max_length=500, default='', blank=True)
+	wiki_link_5_title = models.CharField(max_length=200, default='', blank=True)
+	academic_link_1 = models.CharField(max_length=500, default='', blank=True)
+	academic_link_title_1 = models.CharField(max_length=200, default='', blank=True)
+	academic_link_2 = models.CharField(max_length=500, default='', blank=True)
+	academic_link_title_2 = models.CharField(max_length=200, default='', blank=True)
+	academic_link_3 = models.CharField(max_length=500, default='', blank=True)
+	academic_link_title_3 = models.CharField(max_length=200, default='', blank=True)
+	academic_link_4 = models.CharField(max_length=500, default='', blank=True)
+	academic_link_title_4 = models.CharField(max_length=200, default='', blank=True)
+	academic_link_5 = models.CharField(max_length=500, default='', blank=True)
+	academic_link_title_5 = models.CharField(max_length=200, default='', blank=True)
+	node_link_1 = models.CharField(max_length=500, default='', blank=True)
+	node_link_title_1 = models.CharField(max_length=200, default='', blank=True)
+	node_link_2 = models.CharField(max_length=500, default='', blank=True)
+	node_link_title_2 = models.CharField(max_length=200, default='', blank=True)
+	node_link_3 = models.CharField(max_length=500, default='', blank=True)
+	node_link_title_3 = models.CharField(max_length=200, default='', blank=True)
+	node_link_4 = models.CharField(max_length=500, default='', blank=True)
+	node_link_title_4 = models.CharField(max_length=200, default='', blank=True)
+	node_link_5 = models.CharField(max_length=500, default='', blank=True)
+	node_link_title_5 = models.CharField(max_length=200, default='', blank=True)
 	video_1 = models.CharField(max_length=500, default='', blank=True)
 	video_1_title = models.CharField(max_length=200, default='', blank=True)
 	video_2 = models.CharField(max_length=500, default='', blank=True)
@@ -65,7 +100,6 @@ class Node(models.Model):
 	video_3 = models.CharField(max_length=500, default='', blank=True)
 	video_3_title = models.CharField(max_length=200, default='', blank=True)
 	video_embed = models.CharField(max_length=500, default='', blank=True)
-	node_dir = models.ForeignKey(Node_Dir)
 	
 	def __str__(self):
 		return self.headline
@@ -77,7 +111,10 @@ class Media_Org(models.Model):
 	date_founded = models.DateField(default='1965-08-08')
 	logo = models.ImageField(upload_to='nodanews/static/images/logos')
 	description = models.TextField()
-	media_dir = models.ForeignKey(Media_Dir)
+	bias = models.CharField(max_length=100, default='')
+	duplicate_bias = models.BooleanField(default=True)
+	country = models.CharField(max_length=100, default='')
+	duplicate_country = models.BooleanField(default=True)
 	fake_or_not = models.BooleanField(default=False)
 	
 	

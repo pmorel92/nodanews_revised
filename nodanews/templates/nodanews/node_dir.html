@@ -14,7 +14,7 @@
 			<a href="www.nodanews.com/node_dir"><p id="node_dir">Node Directory</p></a>
     		<a href="www.nodanews.com/media_dir"><p id="media_dir">Media Org. Directory</p></a>
     		<a href="www.nodanews.com/about"><p id="about">About Noda News</p></a>
-    		    		<div class="nav_menu_dropdown">		
+    		<div class="nav_menu_dropdown">		
    				<img src="/static/images/elements/Nav_menu-01.png" class="nav_menu" alt=""/>
    				<div class="nav-content">
 					<a href="http://www.nodanews.com/node_dir">Node Directory</a>
@@ -23,21 +23,42 @@
 				</div>
 			</div>
 	    </nav>
-    <img src="../../static/images/elements/banner_red.svg" alt="" id="banner"/> 
+    <img src="/static/images/elements/banner_red.svg" alt="" id="banner"/> 
     </header>
   	<div>
 		<h1 id="title">Node Directory</h1>
+	<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Node titles..">
 	</div>  		
 	
 	<div>	
-		<ul class="node_list">
+		<ul id="node_list">
 			{% for node in nodes %}
 				<li>
-					<a href="nodes/{{node.node_id}}" target="_blank" style="text-decoration:none; color: #000000"><h2>{{node.headline}}</h2></a>
-					<a href="nodes/{{node.node_id}}" target="_blank"><img src="../../static/images/nodes/Ivory-coast-constituion-01-01.png" width="1850" height="2225" alt=""/ class="node_img"></a>
+					<a href="{{node.id}}" target="_blank" style="text-decoration:none; color: #000000"><h2>{{node.headline}}</h2></a>
+					<h3 style="font-style: italic; font-weight: bold">{{node.subject}}/{{node.country}}</h3>
 				</li>
 			{% endfor %}
 		</ul>
 	</div>
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById('myInput');
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("node_list");
+    li = ul.getElementsByTagName('li');
+
+   
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+	
 </body>
 </html>

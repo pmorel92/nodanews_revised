@@ -1,1 +1,1 @@
-web: gunicorn nodanews.wsgi
+web: waitress-serve nodanews_project.wsgi:application

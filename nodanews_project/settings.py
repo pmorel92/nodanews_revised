@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'i!07uw@0nu$&i@o^@tbb67151$j5u*+r5i(6-%dxp3a6@r%k5r'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1']
 
@@ -118,13 +118,13 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
-
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 STATICFILES_DIRS = [
 os.path.join(BASE_DIR, 'static'),
 '/nodanews/static'
 ]
 STATIC_URL = '/static/'
-STATIC_ROOT = 'C:/User/PhilDawgtheBigDawg/nodanews/nodanews_project'
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles'),
 
 import dj_database_url
 DATABASES['default'] = dj_database_url.config()

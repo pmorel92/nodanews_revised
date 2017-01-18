@@ -19,9 +19,9 @@
 	        		<div class="nav_menu_dropdown">		
    				<img src="{% /images/elements/Nav_menu-01.png %}" class="nav_menu" alt=""/>
    				<div class="nav-content">
-					<a href="http://www.nodanews.com/node_dir">Node Directory</a>
-					<a href="http://www.nodanews.com/media_dir">Media Org. Directory</a>
-					<a href="http://www.nodanews.com/about">About Noda News</a>
+					<a href="/node_dir">Node Directory</a>
+					<a href="/media_dir">Media Org. Directory</a>
+					<a href="/about">About Noda News</a>
 				</div>
 			</div>
 	    </nav>
@@ -29,7 +29,7 @@
     </header>
 	<div> 
 	
-		<img src="{% static /images/index/{{index.index_image}} %}" id="index_image" alt=""/>
+		<img src="{% static index.index_image %}" id="index_image" alt=""/>
 	</div>
   	<div>
 	  <h1 id="headline">{{index.headline}}</h1>

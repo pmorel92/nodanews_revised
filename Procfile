@@ -1,1 +1,1 @@
-web: waitress-serve nodanews_project.wsgi:application
+web: waitress-serve --port=$PORT nodanews_project.wsgi:application

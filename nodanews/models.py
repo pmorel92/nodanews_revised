@@ -30,7 +30,7 @@ class Index(models.Model):
 	Link_42_title = models.CharField(max_length=200, default='', blank=True)
 	Link_43 = models.CharField(max_length=500, default='', blank=True)
 	Link_43_title = models.CharField(max_length=200, default='', blank=True)
-	index_image = models.ImageField(upload_to='/images/index')
+	index_image = models.ImageField(upload_to='images/index')
 	
 	def __str__(self):
 		return self.headline
@@ -42,7 +42,7 @@ class Node(models.Model):
 	country = models.CharField(max_length=100, default='')
 	date_posted = models.DateTimeField()
 	my_take = models.TextField()
-	node_image = models.ImageField(upload_to='/images/nodes')
+	node_image = models.ImageField(upload_to='images/nodes')
 	Link_1 = models.CharField(max_length=500, default='', blank=True)
 	Link_1_title = models.CharField(max_length=200, default='', blank=True)
 	Link_2 = models.CharField(max_length=500, default='', blank=True)
@@ -109,7 +109,7 @@ class Media_Org(models.Model):
 	date_posted = models.DateTimeField()
 	home_page = models.CharField(max_length=200, default='')
 	date_founded = models.DateField(default='1965-08-08')
-	logo = models.ImageField(upload_to='/images/logos')
+	logo = models.ImageField(upload_to='images/logos')
 	description = models.TextField()
 	bias = models.CharField(max_length=100, default='')
 	duplicate_bias = models.BooleanField(default=True)

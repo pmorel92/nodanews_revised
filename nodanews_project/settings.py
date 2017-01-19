@@ -35,7 +35,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'nodanews'
+    'nodanews',
+    'storages',
 ]
 
 MIDDLEWARE_CLASSES = [

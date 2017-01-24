@@ -141,6 +141,7 @@ AWS_SECRET_ACCESS_KEY = 'x6tnZCaW92dJm6yCnwBqDALSHfxJFfGQh8Rod4KQ'
     # it simple - just use this domain plus the path. (If this isn't set, things get complicated).
     # This controls how the `static` template tag from `staticfiles` gets expanded, if you're using it.
     # We also use it in the next setting.
+STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'    
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 STATICFILES_LOCATION = 'static'
 STATICFILES_STORAGE = 'custom_storages.StaticStorage'

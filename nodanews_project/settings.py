@@ -77,14 +77,15 @@ WSGI_APPLICATION = 'nodanews_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'nodanews',
-        'USER': 'postgres',
-        'PASSWORD': 'morris92',
-        'HOST': 'localhost',
-        'PORT': '',
+        'NAME': 'dbn1nbdc2tu485',
+        'USER': 'qubkgmvobjbyai',
+        'PASSWORD': '1a1a8a2d93cf5e77df21d25ba943d22a9ba59264620c5953b387c6eeb8c433e8',
+        'HOST': 'ec2-54-243-55-1.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 # Password validation
@@ -141,11 +142,9 @@ AWS_SECRET_ACCESS_KEY = 'x6tnZCaW92dJm6yCnwBqDALSHfxJFfGQh8Rod4KQ'
     # This controls how the `static` template tag from `staticfiles` gets expanded, if you're using it.
     # We also use it in the next setting.
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
-
-    # This is used by the `static` template tag from `static`, if you're using that. Or if anything else
-    # refers directly to STATIC_URL. So it's safest to always set it.
-STATIC_URL = "https://%s/" % AWS_S3_CUSTOM_DOMAIN
-
-    # Tell the staticfiles app to use S3Boto storage when writing the collected static files (when
-    # you run `collectstatic`).
-STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+STATICFILES_LOCATION = 'static'
+STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+STATIC_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, STATICFILES_LOCATION)
+MEDIAFILES_LOCATION = 'media'
+MEDIA_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
+DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'

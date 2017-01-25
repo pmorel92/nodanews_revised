@@ -32,6 +32,22 @@ def link_list_sources(request, link_id):
 	link = get_object_or_404(Link, pk=link_id)
 	return render(request, 'nodanews/node_link_list_sources.html', {'link': link})
 
+def link_list_wikipedia(request, link_id):
+	link = get_object_or_404(Link, pk=link_id)
+	return render(request, 'nodanews/node_link_list_wikipedia.html', {'link': link})
+
+def link_list_nodes(request, link_id):
+	link = get_object_or_404(Link, pk=link_id)
+	return render(request, 'nodanews/node_link_list_nodes.html', {'link': link})
+
+def link_list_academic(request, link_id):
+	link = get_object_or_404(Link, pk=link_id)
+	return render(request, 'nodanews/node_link_list_academic.html', {'link': link})
+
+def link_list_video(request, link_id):
+	link = get_object_or_404(Link, pk=link_id)
+	return render(request, 'nodanews/node_link_list_video.html', {'link': link})
+
 def media_org(request, media_org_id):
 	media_org = get_object_or_404(Media_Org, pk=media_org_id)
 	return render(request, 'nodanews/media_org.html', {'media_org': media_org})

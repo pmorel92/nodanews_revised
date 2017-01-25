@@ -3,19 +3,20 @@
 <head>
 <meta charset="utf-8">
 <title>Noda News</title>
-<link href="/static/css_style_sheets/nav.css" rel="stylesheet" type="text/css">
-<link href="/static/css_style_sheets/node.css" rel="stylesheet" type="text/css">
+{% load static from staticfiles %}
+<link href="{% static 'css_style_sheets/nav.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'css_style_sheets/node.css' %}" rel="stylesheet" type="text/css">
 </head>
 
 <body>
 	<header>
 		<nav>
-			<a href="www.nodanews.com"><img src="/static/images/elements/nn_logo_horizontal.svg" alt="" id="logo"/></a>
+			<a href="www.nodanews.com"><img src="{% static 'images/elements/nn_logo_horizontal.svg' %}" alt="" id="logo"/></a>
    			<a href="www.nodanews.com/node_dir"><p id="node_dir">Node Directory</p></a>
     		<a href="www.nodanews.com/media_dir"><p id="media_dir">Media Org. Directory</p></a>
     		<a href="www.nodanews.com/about"><p id="about">About Noda News</p></a>
     		<div class="nav_menu_dropdown">		
-   				<img src="/static/images/elements/Nav_menu-01.png" class="nav_menu" alt=""/>
+   				<img src="{% static 'images/elements/Nav_menu-01.png' %}" class="nav_menu" alt=""/>
    				<div class="nav-content">
 					<a href="http://www.nodanews.com/node_dir">Node Directory</a>
 					<a href="http://www.nodanews.com/media_dir">Media Org. Directory</a>
@@ -23,68 +24,50 @@
 				</div>
 			</div>
 	    </nav>
-    <img src="/static/images/elements/banner_red.svg" alt="" id="banner"/> 
+    <img src="{% static 'images/elements/banner_red.svg' %}" alt="" id="banner"/> 
     </header>
 	<div>
 	  <p id="headline">{{node.headline}}</p>
 	</div>
 	<div>
-    <img src="{{node.node_image}}" id="node_img" alt=""/> </div>
+    <img src="{% get_media_prefix/node.node_image %}" id="node_img" alt=""/> </div>
     <div>
 		<p id="my_take">{{node.my_take}}</p>
 	</div>
 	<div>
 		<h2 id="sources">Sources</h2>
-	  <ul class="link_list" style="list-style-type: none">
-			<a href="{{node.Link_1}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{node.Link_1_title}}</li></a>
-			<a href="{{node.Link_2}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{node.Link_2_title}}</li></a>
-			<a href="{{node.Link_3}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{node.Link_3_title}}</li></a>
-			<a href="{{node.Link_4}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{node.Link_4_title}}</li></a>
-			<a href="{{node.Link_5}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{node.Link_5_title}}</li></a>
-			<a href="{{node.Link_6}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{node.Link_6_title}}</li></a>
-			<a href="{{node.Link_7}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{node.Link_7_title}}</li></a>
-			<a href="{{node.Link_8}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{node.Link_8_title}}</li></a>
-			<a href="{{node.Link_9}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{node.Link_9_title}}</li></a>
-			<a href="{{node.Link_10}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{node.Link_10_title}}</li></a>
-		</ul>
+	  		<ul class="link_list" style="list-style-type: none">
+				{% block sources %}
+				{% endblock %}
+	  		</ul>
 	</div>
 	<div>
 		<h2 id="wikipedia">Wikipedia</h2>
 			<ul class="wikipedia_list" style="list-style-type: none">
-				<a href="{{node.wiki_link_1}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{node.wiki_link_1_title}}</li></a>
-				<a href="{{node.wiki_link_2}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{node.wiki_link_2_title}}</li></a>
-				<a href="{{node.wiki_link_3}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{node.wiki_link_3_title}}</li></a>
-				<a href="{{node.wiki_link_4}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{node.wiki_link_4_title}}</li></a>
-				<a href="{{node.wiki_link_5}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{node.wiki_link_5_title}}</li></a>
+				{% block wikipedia %}
+				{% endblock %}
 			</ul>	
 	</div>
 	<div>
 		<h2 id="academic">Academic</h2>
 			<ul class="academic_list" style="list-style-type: none">
-				<a href="{{node.academic_link_1}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{node.academic_link_title_1}}</li></a>
-				<a href="{{node.academic_link_2}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{node.academic_link_title_2}}</li></a>
-				<a href="{{node.academic_link_3}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{node.academic_link_title_3}}</li></a>
-				<a href="{{node.academic_link_4}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{node.academic_link_title_4}}</li></a>
-				<a href="{{node.academic_link_5}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{node.academic_link_title_5}}</li></a>
+				{% block academic %}
+				{% endblock %}
 			</ul>	
 	</div>
 	<div>
 		<h2 id="nodes_title">Related Nodes</h2>
 			<ul class="node_list" style="list-style-type: none">
-				<a href="{{node.node_link_1}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{node.node_link_title_1}}</li></a>
-				<a href="{{node.node_link_2}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{node.node_link_title_2}}</li></a>
-				<a href="{{node.node_link_3}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{node.node_link_title_3}}</li></a>
-				<a href="{{node.node_link_4}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{node.node_link_title_4}}</li></a>
-				<a href="{{node.node_link_5}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{node.node_link_title_5}}</li></a>
+				{% block nodes %}
+				{% endblock %
 			</ul>	
 	</div>
 	<div>
 		<h2 id="video">Video</h2>
 		<iframe id="video_embed" width="420" height="236" src="{{node.video_embed}}" frameborder="0" allowfullscreen></iframe>
 		<ul id="video_list" style="list-style-type: none">
-			<a href="{{node.video_1}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{node.video_1_title}}</li></a>
-			<a href="{{node.video_2}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{node.video_2_title}}</li></a>
-			<a href="{{node.video_3}}" style="text-decoration:none; color: #000000" target="_blank"><li>{{node.video_3_title}}</li></a>
+			{% block video %}
+			{% endblock %}
 		</ul>
 	</div>   
     

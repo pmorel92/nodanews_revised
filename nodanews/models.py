@@ -47,6 +47,7 @@ class Node(models.Model):
 	
 	def __str__(self):
 		return self.headline
+
 class Link(models.Model):
 	
     SOURCES = 'Sou'
@@ -100,7 +101,6 @@ class Media_Org(models.Model):
 	country = models.CharField(max_length=100, default='')
 	duplicate_country = models.BooleanField(default=True)
 	fake_or_not = models.BooleanField(default=False)
-	
 	
 	def __str__(self):
 		return self.name

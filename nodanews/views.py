@@ -24,10 +24,10 @@ def media_dir(request):
 	media_orgs = Media_Org.objects.order_by('name')
 	return render(request, 'nodanews/media_dir.html', {'media_orgs': media_orgs})
 
-def node(request, node_id):
+def node(request, node_id, link_attribute):
 	node = get_object_or_404(Node, pk=node_id)
-	links = Links.objects.all(Links, pk=links_attribute)
-	return render(request, 'nodanews/node.html', {'node': node, 'links':links})
+	link = Link.objects.all(Link, pk=link_attribute)
+	return render(request, 'nodanews/node.html', {'node': node, 'link': link})
 
 def media_org(request, media_org_id):
 	media_org = get_object_or_404(Media_Org, pk=media_org_id)

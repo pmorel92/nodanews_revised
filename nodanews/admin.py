@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import Node, Media_Org, Index, Links
+from .models import Node, Media_Org, Index, Link
 
 
 class Node_Admin(admin.ModelAdmin):
@@ -19,7 +19,7 @@ class Index_Admin(admin.ModelAdmin):
 
 	
 	]	
-class Links_Admin(admin.ModelAdmin):
+class Link_Admin(admin.ModelAdmin):
 	fieldsets = [
 
 	
@@ -29,4 +29,4 @@ class Links_Admin(admin.ModelAdmin):
 admin.site.register(Node, Node_Admin)
 admin.site.register(Media_Org, Media_Org_Admin)
 admin.site.register(Index, Index_Admin)
-admin.site.register(Links, Links_Admin)
+admin.site.register(Link, Link_Admin)

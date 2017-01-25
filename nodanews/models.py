@@ -47,7 +47,7 @@ class Node(models.Model):
 	
 	def __str__(self):
 		return self.headline
-class Links(models.Model):
+class Link(models.Model):
 	
     SOURCES = 'Sou'
     WIKIPEDIA = 'Wik'

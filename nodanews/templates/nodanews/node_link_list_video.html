@@ -1,8 +1,8 @@
 	
 {% extends 'node.html' %}
 
-{% block sources %}
-    {% if link.attribute is Sources %}
+{% block video %}
+    {% if link.attribute is Video %}
 			{% for link in links %}
 				<li>
 					<a href="{{link.link_url}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{link.title_1}}</h4></a>

@@ -3,6 +3,7 @@ from django.template.loader import get_template
 from django.template import Context
 from  django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.core.urlresolvers import reverse
+from django.templatetags.static import get_media_prefix
 from .models import Node, Media_Org, Index, Link
 
 def index(request):

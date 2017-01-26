@@ -37,14 +37,14 @@
 	<div>
 		<h2 id="sources">Sources</h2>
 	  		<ul class="link_list" style="list-style-type: none">
-				{% block sources %}
-				{% endblock %}
+				{% block sources %}{% endblock %}
 	  		</ul>
 	</div>
 	<div>
 		<h2 id="wikipedia">Wikipedia</h2>
 			<ul class="wikipedia_list" style="list-style-type: none">
 				{% block wikipedia %}
+				{% include 'node_link_list_wikipedia.html' %}
 				{% endblock %}
 			</ul>	
 	</div>

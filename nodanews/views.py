@@ -25,9 +25,9 @@ def media_dir(request):
 	media_orgs = Media_Org.objects.order_by('name')
 	return render(request, 'nodanews/media_dir.html', {'media_orgs': media_orgs})
 
-def node(request, node_id, link_id):
+def node(request, node_id):
 	node = get_object_or_404(Node, pk=node_id)
-	link = get_object_or_404(Link, pk=link_id)
+	link = Link.object.all()
 	if link.attribute is node.headline:
 		return render(request, 'nodanews/node.html', {'node': node, 'link': link})
 	else:

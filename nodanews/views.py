@@ -27,12 +27,11 @@ def media_dir(request):
 
 def node(request, node_id):
 	node = get_object_or_404(Node, pk=node_id)
-	link = Link.objects.all()
-	if link.node is node.headline:
-		return render(request, 'nodanews/node.html', {'node': node, 'link': link})
-	else:
-		return redirect('nodanews/node_dir.html')
-		
+	node_key = Node.headline
+	link_key = Link.node
+	link = Link.objects.filter(link_key=node_key)
+	return render(request, 'nodanews/node.html', {'node': node, 'link': link})
+
 
 def media_org(request, media_org_id):
 	media_org = get_object_or_404(Media_Org, pk=media_org_id)

@@ -63,7 +63,7 @@ ROOT_URLCONF = 'nodanews_project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates/nodanews'],
         'APP_DIRS': True,
         'OPTIONS': {
             'debug': True,

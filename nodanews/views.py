@@ -27,7 +27,7 @@ def media_dir(request):
 
 def node(request, node_id):
 	node = get_object_or_404(Node, pk=node_id)
-	link = Link.object.all()
+	link = Link.objects.all()
 	if link.attribute is node.headline:
 		return render(request, 'nodanews/node.html', {'node': node, 'link': link})
 	else:

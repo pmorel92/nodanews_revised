@@ -28,8 +28,7 @@ def media_dir(request):
 def node(request, node_id):
 	node = get_object_or_404(Node, pk=node_id)
 	node_key = Node.headline
-	link_key = Link.node_ref
-	link = Link.objects.filter(link_key=node_key)
+	link = Link.objects.filter(node_ref=node_key)
 	return render(request, 'nodanews/node.html', {'node': node, 'link': link})
 
 

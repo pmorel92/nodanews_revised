@@ -1,4 +1,4 @@
-from django.shortcuts import get_object_or_404, render
+from django.shortcuts import get_object_or_404, render, redirect
 from django.template.loader import get_template
 from django.template import Context
 from  django.http import HttpResponse, Http404, HttpResponseRedirect
@@ -25,13 +25,14 @@ def media_dir(request):
 	media_orgs = Media_Org.objects.order_by('name')
 	return render(request, 'nodanews/media_dir.html', {'media_orgs': media_orgs})
 
-def node(request, node_id):
+def node(request, node_id, link_id):
 	node = get_object_or_404(Node, pk=node_id)
-	link_dict = {
-		"template name": "nodanews/node_list_wikipedia.html",
-		"queryset": Link.objects.all(),
-	}
-	return render(request, 'nodanews/node.html', {'node': node})
+	link = get_object_or_404(Link, pk=link_id)
+	if link.attribute is node.headline:
+		return render(request, 'nodanews/node.html', {'node': node, 'link': link})
+	else:
+		return redirect('nodanews/node_dir.html')
+		
 
 def media_org(request, media_org_id):
 	media_org = get_object_or_404(Media_Org, pk=media_org_id)

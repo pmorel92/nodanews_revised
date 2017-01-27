@@ -70,10 +70,10 @@ class Link_Sources(models.Model):
     link_url_9 = models.CharField(max_length=500, default='url', blank=True)
     title_10 = models.CharField(max_length=200, default='title', blank=True)
     link_url_10 = models.CharField(max_length=500, default='url', blank=True)
-    node_ref = models.ForeignKey(Node)
+    node = models.ForeignKey(Node)
 	
     def __str__(self):
-        return self.node_ref.headline
+        return self.node.headline
         
 class Link_Wikipedia(models.Model):
     attribute = models.CharField(max_length=20, default='Wikipedia')
@@ -97,10 +97,10 @@ class Link_Wikipedia(models.Model):
     link_url_9 = models.CharField(max_length=500, default='url', blank=True)
     title_10 = models.CharField(max_length=200, default='title', blank=True)
     link_url_10 = models.CharField(max_length=500, default='url', blank=True)
-    node_ref = models.ForeignKey(Node)
+    node = models.ForeignKey(Node)
 	
     def __str__(self):
-        return self.node_ref.headline
+        return self.node.headline
         
 class Link_Academic(models.Model):
     attribute = models.CharField(max_length=20, default='Academic')
@@ -124,10 +124,10 @@ class Link_Academic(models.Model):
     link_url_9 = models.CharField(max_length=500, default='url', blank=True)
     title_10 = models.CharField(max_length=200, default='title', blank=True)
     link_url_10 = models.CharField(max_length=500, default='url', blank=True)
-    node_ref = models.ForeignKey(Node)
+    node = models.ForeignKey(Node)
 	
     def __str__(self):
-        return self.node_ref.headline
+        return self.node.headline
         
 class Link_Nodes(models.Model):
     attribute = models.CharField(max_length=20, default='Nodes')
@@ -151,10 +151,10 @@ class Link_Nodes(models.Model):
     link_url_9 = models.CharField(max_length=500, default='url', blank=True)
     title_10 = models.CharField(max_length=200, default='title', blank=True)
     link_url_10 = models.CharField(max_length=500, default='url', blank=True)
-    node_ref = models.ForeignKey(Node)
+    node = models.ForeignKey(Node)
 	
     def __str__(self):
-        return self.node_ref.headline
+        return self.node.headline
         
 class Link_Video(models.Model):
     attribute = models.CharField(max_length=20, default='Video')
@@ -178,10 +178,10 @@ class Link_Video(models.Model):
     link_url_9 = models.CharField(max_length=500, default='url', blank=True)
     title_10 = models.CharField(max_length=200, default='title', blank=True)
     link_url_10 = models.CharField(max_length=500, default='url', blank=True)
-    node_ref = models.ForeignKey(Node)
+    node = models.ForeignKey(Node)
 	
     def __str__(self):
-        return self.node_ref.headline
+        return self.node.headline
 	
 class Media_Org(models.Model):
 	name = models.CharField(max_length=100, default='')

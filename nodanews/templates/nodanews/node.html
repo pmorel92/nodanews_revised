@@ -43,7 +43,10 @@
 	<div>
 		<h2 id="wikipedia">Wikipedia</h2>
     		<ul class="wikipedia_list" style="list-style-type: none">
-    			<li> {{ link.attribute }}</li>
+    			<li> {{link.attribute}}</li>
+    			<li> {{link.title_1}}</li>
+    			<li> {{link.node_headline}}</li>
+    			<li> {{link.node_ref}}</li>
     			{% if link.attribute is 'Wikipedia' %}
     			
 				<li>

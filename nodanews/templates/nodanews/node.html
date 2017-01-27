@@ -43,7 +43,6 @@
 	<div>
 		<h2 id="wikipedia">Wikipedia</h2>
     		<ul class="wikipedia_list" style="list-style-type: none">
-    			{% for link_wikipedia in link_wikipedias %}
 				<li>
 					<a href="{{link_wikipedia.link_url}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{link_wikipedia.title_1}}</h4></a>
 				</li>
@@ -74,7 +73,6 @@
 				<li>
 					<a href="{{link.link_url_10}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{link.title_10}}</h4></a>
 				</li>
-					{% endfor %}
 			</ul>	
 
 	</div>

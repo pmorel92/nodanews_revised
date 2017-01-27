@@ -87,7 +87,7 @@ class Link(models.Model):
     node_ref = models.ForeignKey(Node)
 	
     def __str__(self):
-        return '{} / {}'.format(self.node.headline, self.attribute)
+        return '{} / {}'.format(self.node_ref.headline, self.attribute)
 	
 class Media_Org(models.Model):
 	name = models.CharField(max_length=100, default='')

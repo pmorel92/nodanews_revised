@@ -3,6 +3,7 @@ from django.template.loader import get_template
 from django.template import Context
 from  django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.core.urlresolvers import reverse
+from django.db.models import F
 
 from .models import Node, Media_Org, Index, Link
 
@@ -27,8 +28,7 @@ def media_dir(request):
 
 def node(request, node_id):
 	node = get_object_or_404(Node, pk=node_id)
-	id = Node.id
-	link = Link.objects.filter(node_ref_id=id)
+	link = Link.objects.filter(node_ref__gt=F('node_ref.headline'))
 	return render(request, 'nodanews/node.html', {'node': node, 'link': link})
 
 

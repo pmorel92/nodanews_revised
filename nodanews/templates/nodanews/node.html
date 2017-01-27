@@ -43,32 +43,27 @@
 	<div>
 		<h2 id="wikipedia">Wikipedia</h2>
     		<ul class="wikipedia_list" style="list-style-type: none">
-    			<li> {{link.attribute}}</li>
-    			<li> {{link.title_1}}</li>
-    			<li> {{link.node_headline}}</li>
-    			<li> {{link.node_ref}}</li>
-    			{% if link.attribute is 'Wikipedia' %}
-    			
+    			{% for link_wikipedia in link_wikipedias %}
 				<li>
-					<a href="{{link.link_url}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{link.title_1}}</h4></a>
+					<a href="{{link_wikipedia.link_url}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{link_wikipedia.title_1}}</h4></a>
 				</li>
 				<li>
-					<a href="{{link.link_url_2}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{link.title_2}}</h4></a>
+					<a href="{{link_wikipedia.link_url_2}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{link_wikipedia.title_2}}</h4></a>
 				</li>
 				<li>
-					<a href="{{link.link_url_3}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{link.title_3}}</h4></a>
+					<a href="{{link_wikipedia.link_url_3}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{link_wikipedia.title_3}}</h4></a>
 				</li>
 				<li>
-					<a href="{{link.link_url_4}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{link.title_4}}</h4></a>
+					<a href="{{link_wikipedia.link_url_4}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{link_wikipedia.title_4}}</h4></a>
 				</li>
 				<li>
-					<a href="{{link.link_url_5}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{link.title_5}}</h4></a>
+					<a href="{{link_wikipedia.link_url_5}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{link_wikipedia.title_5}}</h4></a>
 				</li>
 				<li>
-					<a href="{{link.link_url_6}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{link.title_6}}</h4></a>
+					<a href="{{link_wikipedia.link_url_6}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{link_wikipedia.title_6}}</h4></a>
 				</li>
 				<li>
-					<a href="{{link.link_url_7}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{link.title_7}}</h4></a>
+					<a href="{{link.link_url_7}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{link_wikipedia.title_7}}</h4></a>
 				</li>
 				<li>
 					<a href="{{link.link_url_8}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{link.title_8}}</h4></a>
@@ -79,7 +74,7 @@
 				<li>
 					<a href="{{link.link_url_10}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{link.title_10}}</h4></a>
 				</li>
-					{% endif %}
+					{% endfor %}
 			</ul>	
 
 	</div>

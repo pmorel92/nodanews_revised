@@ -5,7 +5,7 @@ from  django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.core.urlresolvers import reverse
 from django.db.models import F
 
-from .models import Node, Media_Org, Index, Link
+from .models import Node, Media_Org, Index, Link_Sources, Link_Academic, Link_Nodes, Link_Video, Link_Wikipedia
 
 def index(request):
 	index = get_object_or_404(Index)
@@ -28,8 +28,12 @@ def media_dir(request):
 
 def node(request, node_id):
 	node = get_object_or_404(Node, pk=node_id)
-	link = Link.objects.all()
-	return render(request, 'nodanews/node.html', {'node': node, 'link': link})
+	link_source = Link_Sources.objects.filter(Link_Sources.node_ref)
+	link_wikipedia = Link_Sources.objects.filter(Link_Wikipedia.node_ref)
+	link_academic = Link_Sources.objects.filter(Link_Academic.node_ref)
+	link_node = Link_Sources.objects.filter(Link_Nodes.node_ref)
+	link_video = Link_Sources.objects.filter(Link_Video.node_ref)
+	return render(request, 'nodanews/node.html', {'node': node, 'link_source': link_source, 'link_wikipedia': link_wikipedia, 'link_academic': link_academic ,'link_node': link_node, 'link_video': link_node})
 
 
 def media_org(request, media_org_id):

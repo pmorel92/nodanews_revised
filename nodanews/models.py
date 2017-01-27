@@ -48,22 +48,8 @@ class Node(models.Model):
 	def __str__(self):
 		return self.headline
 
-class Link(models.Model):
-	
-    SOURCES = 'Sou'
-    WIKIPEDIA = 'Wik'
-    VIDEO = 'Vid'
-    ACADEMIC = 'Aca'
-    NODE_LINKS = 'Nod'
-    ATTRIBUTE_CHOICES = (
-        (SOURCES, 'Sources'),
-        (WIKIPEDIA, 'Wikipedia'),
-        (VIDEO, 'Video'),
-        (ACADEMIC, 'Academic'),
-        (NODE_LINKS, 'Nodes'),
-    )
-
-    attribute = models.CharField(max_length=10,choices=ATTRIBUTE_CHOICES, default=SOURCES)
+class Link_Sources(models.Model):
+    attribute = models.CharField(max_length=20, default='Sources')
     title_1 = models.CharField(max_length=200, default='title', blank=True)
     link_url = models.CharField(max_length=500, default='url', blank=True)
     title_2 = models.CharField(max_length=200, default='title', blank=True)
@@ -84,11 +70,118 @@ class Link(models.Model):
     link_url_9 = models.CharField(max_length=500, default='url', blank=True)
     title_10 = models.CharField(max_length=200, default='title', blank=True)
     link_url_10 = models.CharField(max_length=500, default='url', blank=True)
-    node_headline = models.CharField(max_length=200, default='node_ref-headline', blank=True)
     node_ref = models.ForeignKey(Node)
 	
     def __str__(self):
-        return '{} / {}'.format(self.node_ref.headline, self.attribute)
+        return self.node_ref.headline
+        
+class Link_Wikipedia(models.Model):
+    attribute = models.CharField(max_length=20, default='Wikipedia')
+    title_1 = models.CharField(max_length=200, default='title', blank=True)
+    link_url = models.CharField(max_length=500, default='url', blank=True)
+    title_2 = models.CharField(max_length=200, default='title', blank=True)
+    link_url_2 = models.CharField(max_length=500, default='url', blank=True)
+    title_3 = models.CharField(max_length=200, default='title', blank=True)
+    link_url_3 = models.CharField(max_length=500, default='url', blank=True)
+    title_4 = models.CharField(max_length=200, default='title', blank=True)
+    link_url_4 = models.CharField(max_length=500, default='url', blank=True)
+    title_5 = models.CharField(max_length=200, default='title', blank=True)
+    link_url_5 = models.CharField(max_length=500, default='url', blank=True)
+    title_6 = models.CharField(max_length=200, default='title', blank=True)
+    link_url_6 = models.CharField(max_length=500, default='url', blank=True)
+    title_7 = models.CharField(max_length=200, default='title', blank=True)
+    link_url_7 = models.CharField(max_length=500, default='url', blank=True)
+    title_8 = models.CharField(max_length=200, default='title', blank=True)
+    link_url_8 = models.CharField(max_length=500, default='url', blank=True)
+    title_9 = models.CharField(max_length=200, default='title', blank=True)
+    link_url_9 = models.CharField(max_length=500, default='url', blank=True)
+    title_10 = models.CharField(max_length=200, default='title', blank=True)
+    link_url_10 = models.CharField(max_length=500, default='url', blank=True)
+    node_ref = models.ForeignKey(Node)
+	
+    def __str__(self):
+        return self.node_ref.headline
+        
+class Link_Academic(models.Model):
+    attribute = models.CharField(max_length=20, default='Academic')
+    title_1 = models.CharField(max_length=200, default='title', blank=True)
+    link_url = models.CharField(max_length=500, default='url', blank=True)
+    title_2 = models.CharField(max_length=200, default='title', blank=True)
+    link_url_2 = models.CharField(max_length=500, default='url', blank=True)
+    title_3 = models.CharField(max_length=200, default='title', blank=True)
+    link_url_3 = models.CharField(max_length=500, default='url', blank=True)
+    title_4 = models.CharField(max_length=200, default='title', blank=True)
+    link_url_4 = models.CharField(max_length=500, default='url', blank=True)
+    title_5 = models.CharField(max_length=200, default='title', blank=True)
+    link_url_5 = models.CharField(max_length=500, default='url', blank=True)
+    title_6 = models.CharField(max_length=200, default='title', blank=True)
+    link_url_6 = models.CharField(max_length=500, default='url', blank=True)
+    title_7 = models.CharField(max_length=200, default='title', blank=True)
+    link_url_7 = models.CharField(max_length=500, default='url', blank=True)
+    title_8 = models.CharField(max_length=200, default='title', blank=True)
+    link_url_8 = models.CharField(max_length=500, default='url', blank=True)
+    title_9 = models.CharField(max_length=200, default='title', blank=True)
+    link_url_9 = models.CharField(max_length=500, default='url', blank=True)
+    title_10 = models.CharField(max_length=200, default='title', blank=True)
+    link_url_10 = models.CharField(max_length=500, default='url', blank=True)
+    node_ref = models.ForeignKey(Node)
+	
+    def __str__(self):
+        return self.node_ref.headline
+        
+class Link_Nodes(models.Model):
+    attribute = models.CharField(max_length=20, default='Nodes')
+    title_1 = models.CharField(max_length=200, default='title', blank=True)
+    link_url = models.CharField(max_length=500, default='url', blank=True)
+    title_2 = models.CharField(max_length=200, default='title', blank=True)
+    link_url_2 = models.CharField(max_length=500, default='url', blank=True)
+    title_3 = models.CharField(max_length=200, default='title', blank=True)
+    link_url_3 = models.CharField(max_length=500, default='url', blank=True)
+    title_4 = models.CharField(max_length=200, default='title', blank=True)
+    link_url_4 = models.CharField(max_length=500, default='url', blank=True)
+    title_5 = models.CharField(max_length=200, default='title', blank=True)
+    link_url_5 = models.CharField(max_length=500, default='url', blank=True)
+    title_6 = models.CharField(max_length=200, default='title', blank=True)
+    link_url_6 = models.CharField(max_length=500, default='url', blank=True)
+    title_7 = models.CharField(max_length=200, default='title', blank=True)
+    link_url_7 = models.CharField(max_length=500, default='url', blank=True)
+    title_8 = models.CharField(max_length=200, default='title', blank=True)
+    link_url_8 = models.CharField(max_length=500, default='url', blank=True)
+    title_9 = models.CharField(max_length=200, default='title', blank=True)
+    link_url_9 = models.CharField(max_length=500, default='url', blank=True)
+    title_10 = models.CharField(max_length=200, default='title', blank=True)
+    link_url_10 = models.CharField(max_length=500, default='url', blank=True)
+    node_ref = models.ForeignKey(Node)
+	
+    def __str__(self):
+        return self.node_ref.headline
+        
+class Link_Video(models.Model):
+    attribute = models.CharField(max_length=20, default='Video')
+    title_1 = models.CharField(max_length=200, default='title', blank=True)
+    link_url = models.CharField(max_length=500, default='url', blank=True)
+    title_2 = models.CharField(max_length=200, default='title', blank=True)
+    link_url_2 = models.CharField(max_length=500, default='url', blank=True)
+    title_3 = models.CharField(max_length=200, default='title', blank=True)
+    link_url_3 = models.CharField(max_length=500, default='url', blank=True)
+    title_4 = models.CharField(max_length=200, default='title', blank=True)
+    link_url_4 = models.CharField(max_length=500, default='url', blank=True)
+    title_5 = models.CharField(max_length=200, default='title', blank=True)
+    link_url_5 = models.CharField(max_length=500, default='url', blank=True)
+    title_6 = models.CharField(max_length=200, default='title', blank=True)
+    link_url_6 = models.CharField(max_length=500, default='url', blank=True)
+    title_7 = models.CharField(max_length=200, default='title', blank=True)
+    link_url_7 = models.CharField(max_length=500, default='url', blank=True)
+    title_8 = models.CharField(max_length=200, default='title', blank=True)
+    link_url_8 = models.CharField(max_length=500, default='url', blank=True)
+    title_9 = models.CharField(max_length=200, default='title', blank=True)
+    link_url_9 = models.CharField(max_length=500, default='url', blank=True)
+    title_10 = models.CharField(max_length=200, default='title', blank=True)
+    link_url_10 = models.CharField(max_length=500, default='url', blank=True)
+    node_ref = models.ForeignKey(Node)
+	
+    def __str__(self):
+        return self.node_ref.headline
 	
 class Media_Org(models.Model):
 	name = models.CharField(max_length=100, default='')

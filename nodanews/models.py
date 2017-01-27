@@ -84,6 +84,7 @@ class Link(models.Model):
     link_url_9 = models.CharField(max_length=500, default='url', blank=True)
     title_10 = models.CharField(max_length=200, default='title', blank=True)
     link_url_10 = models.CharField(max_length=500, default='url', blank=True)
+    node_headline = models.CharField(max_length=200, default='node_ref-headline', blank=True)
     node_ref = models.ForeignKey(Node)
 	
     def __str__(self):

@@ -28,11 +28,11 @@ def media_dir(request):
 
 def node(request, node_id):
 	node = get_object_or_404(Node, pk=node_id)
-	link_source = get_object_or_404(Link_Sources, pk=node_id)
-	link_wikipedia = get_object_or_404(Link_Wikipedia, pk=node_id)
-	link_academic = get_object_or_404(Link_Academic, pk=node_id)
-	link_node = get_object_or_404(Link_Nodes, pk=node_id)
-	link_video = get_object_or_404(Link_Video, pk=node_id)
+	link_source = get_object_or_404(Link_Sources, pk=node.id)
+	link_wikipedia = get_object_or_404(Link_Wikipedia, pk=node.id)
+	link_academic = get_object_or_404(Link_Academic, pk=node.id)
+	link_node = get_object_or_404(Link_Nodes, pk=node.id)
+	link_video = get_object_or_404(Link_Video, pk=node.id)
 	return render(request, 'nodanews/node.html', {'node': node, 'link_source': link_source, 'link_wikipedia': link_wikipedia, 'link_academic': link_academic ,'link_node': link_node, 'link_video': link_node})
 
 

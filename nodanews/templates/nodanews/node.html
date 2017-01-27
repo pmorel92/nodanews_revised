@@ -43,8 +43,9 @@
 	<div>
 		<h2 id="wikipedia">Wikipedia</h2>
     		<ul class="wikipedia_list" style="list-style-type: none">
-    			{% if link.attribute is 'Wikipedia' %}
     			<li> link.attribute</li>
+    			{% if link.attribute is 'Wikipedia' %}
+    			
 				<li>
 					<a href="{{link.link_url}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{link.title_1}}</h4></a>
 				</li>

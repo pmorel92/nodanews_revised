@@ -4,7 +4,6 @@
 <meta charset="utf-8">
 <title>Noda News</title>
 {% load static from staticfiles %}
-{% load media from staticfiles %}
 <link href="{% static 'css_style_sheets/nav.css' %}" rel="stylesheet" type="text/css">
 <link href="{% static 'css_style_sheets/node.css' %}" rel="stylesheet" type="text/css">
 </head>
@@ -31,7 +30,7 @@
 	  <p id="headline">{{node.headline}}</p>
 	</div>
 	<div>
-    <img src="{% media node.node_img %}" id="node_img" alt=""/> </div>
+    <img src="{% static 'node.node_img' %}" id="node_img" alt=""/> </div>
     <div>
 		<p id="my_take">{{node.my_take}}</p>
 	</div>

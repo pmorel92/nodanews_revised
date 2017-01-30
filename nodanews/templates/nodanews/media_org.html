@@ -3,19 +3,20 @@
 <head>
 <meta charset="utf-8">
 <title>Noda News</title>
-<link href="/static/css_style_sheets/nav.css" rel="stylesheet" type="text/css">
-<link href="/static/css_style_sheets/media_org.css" rel="stylesheet" type="text/css">
+{% load static from staticfiles %}
+<link href="{% static 'css_style_sheets/nav.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'css_style_sheets/media_org.css' %}" rel="stylesheet" type="text/css">
 </head>
 
 <body>
 	<header>
 		<nav>
-			<a href="www.nodanews.com"><img src="/static/images/elements/nn_logo_horizontal.svg" alt="" id="logo"/></a> 
-			<a href="www.nodanews.com/node_dir"><p id="node_dir">Node Directory</p></a>
+			<a href="www.nodanews.com"><img src="{% static 'images/elements/nn_logo_horizontal.svg' %}" alt="" id="logo"/></a>
+   			<a href="www.nodanews.com/node_dir"><p id="node_dir">Node Directory</p></a>
     		<a href="www.nodanews.com/media_dir"><p id="media_dir">Media Org. Directory</p></a>
     		<a href="www.nodanews.com/about"><p id="about">About Noda News</p></a>
-		  <div class="nav_menu_dropdown">		
-   				<img src="/static/images/elements/Nav_menu-01.png" class="nav_menu" alt=""/>
+    		<div class="nav_menu_dropdown">		
+   				<img src="{% static 'images/elements/Nav_menu-01.png' %}" class="nav_menu" alt=""/>
    				<div class="nav-content">
 					<a href="http://www.nodanews.com/node_dir">Node Directory</a>
 					<a href="http://www.nodanews.com/media_dir">Media Org. Directory</a>
@@ -23,13 +24,13 @@
 				</div>
 			</div>
 	    </nav>
-    <img src="/static/images/elements/banner_blue.svg" alt="" id="banner"/> 
+    <img src="{% static 'images/elements/banner_blue.svg' %}" alt="" id="banner"/>
     </header>		
 	<div>
 	  <p id="name">{{media_org.name}}</p>
 	</div>
 	<div>
-		<a href="{{media_org.home_page}}"><img src="media_org.logo" id="media_org_logo" alt=""/></a>
+		<a href="{{media_org.home_page}}"><img src="https://nodastorage.s3.amazonaws.com/media/{{media_org.logo}}" id="media_org_logo" alt=""/></a>
 	</div>
 	<div>
 	  <p id="date_founded">Date Founded: {{media_org.date_founded}}</p>
@@ -39,7 +40,7 @@
 	</div>	
 	<div>
 		{% if media_org.fake_or_not %}
-		  <img src="/static/images/elements/fake.png" id="fake" alt=""/> 
+		  <img src="{% static 'images/elements/fake.png' %}" id="fake" alt=""/> 
 		
 		{% endif %} 
 	</div>

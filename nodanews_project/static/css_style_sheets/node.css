@@ -15,7 +15,7 @@
 	opacity: 0.2;
 }
 #my_take {
-	width: 403px;
+	width: 600px;
 	position: absolute;
 	top: 245px;
 	left: 417px;
@@ -153,24 +153,35 @@ a li {
 
 
 @media only screen and (max-width : 1200px) {
-	#video{
-	position: absolute;
-	right: 5%;
-	}	
-	#video_embed{
-	position: absolute;
-	right: 5%			
-	}
+
 	#headline{
 	position: absolute;
 	left: 33%;
 	}
+	#video_embed {
+	position: absolute;
+	top: 1013px;
+	left: 0em;
+}
 	#video_list{
 	position: absolute;
-	right: 5%			
+	left: 24px;
+	top: 1252px;
+	width: 255px;
+	padding-top: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	padding-left: 20px;
 	}
+#video {
+	position: absolute;
+	left: 9%;
+	top: 929px;
+}
+
 #my_take {
 	width: 319px;
+	font-size: x-large
 }
 #video_embed {
 	position: absolute;
@@ -190,7 +201,7 @@ a li {
 	width: 400px;
 	max-height: 750px;
 	overflow-y: auto;
-			
+	font-size: x-large		
 	}
 	#video_embed {
 	position: absolute;

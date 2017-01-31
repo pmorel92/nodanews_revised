@@ -185,19 +185,19 @@ a li {
 	left: 33%;
 	}
 .link_list{
-	font-size: x-large;
+	font-size: large;
 }
 .node_list{
-	font-size: x-large;
+	font-size: large;
 }
 .wikipedia_list{
-	font-size: x-large;
+	font-size: large;
 }
 .academic_list{
-	font-size: x-large;000000
+	font-size: large;
 }
 .video_list{
-	font-size: x-large;
+	font-size: large;
 }
 	
 #my_take {
@@ -218,44 +218,14 @@ a li {
 		left: 300px
 	}
 	#my_take{
-	position: absolute;
-	left: 350px;
+
 	width: 400px;
-	max-height: 750px;
-	overflow-y: auto;
-	font-size: x-large		
-	}
-	#video_embed {
-	position: absolute;
-	top: 1013px;
-	left: 0em;
-}
-	#video_list{
-	position: absolute;
-	left: 24px;
-	top: 1252px;
-	width: 255px;
-	padding-top: 20px;
-	padding-right: 20px;
-	padding-bottom: 20px;
-	padding-left: 20px;
-	}
-#video {
-	position: absolute;
-	left: 9%;
-	top: 929px;
-}
 
 	#node_img{
 	position: absolute;
 	left: 225px	
 	}
 }
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in mauris eget metus fermentum feugiat porta in velit. Nulla facilisi. Fusce vestibulum lectus posuere ante molestie, egestas aliquet leo consectetur. Donec ut posuere quam, eu accumsan elit. Nunc eget lectus a lacus viverra tincidunt nec quis turpis. Pellentesque vulputate sagittis est at mollis. Aliquam consequat iaculis vulputate. Nulla eget sem sed elit dictum pulvinar. Aliquam laoreet sagittis condimentum. Morbi mattis aliquam nisl, eget eleifend urna volutpat a. Nullam maximus vel odio non congue. Cras vel faucibus tellus, id viverra mi. Nunc et nisi a elit volutpat accumsan at nec lectus. Aenean accumsan, ligula a malesuada pretium, sapien lectus faucibus nibh, sed scelerisque lacus nisi eu felis. Nam laoreet sodales leo, sed placerat ante.
-
-Vestibulum hendrerit fermentum sem at euismod. Sed hendrerit libero vel urna mattis luctus. In pellentesque mattis sem, vitae posuere mi aliquam sit amet. Donec mollis libero a lacus placerat tincidunt. Fusce auctor vulputate lorem, ac ultricies dui sodales id. Etiam volutpat sagittis neque, quis eleifend diam convallis eget. Mauris feugiat consequat neque, egestas gravida metus convallis egestas. Integer aliquam mollis magna, vel dignissim ex suscipit ut. Proin turpis mauris, dictum eu metus ac, fringilla bibendum massa. Aliquam ullamcorper aliquet lacus, sed feugiat tellus porta eget. Fusce ex nulla, laoreet a hendrerit ac, accumsan id massa.
-
-Vestibulum cursus maximus libero, quis sagittis dolor volutpat egestas. Duis tincidunt leo nec nibh tempus posuere. Pellentesque non tincidunt leo. Nunc non facilisis ante, ac lobortis orci. Donec sollicitudin semper malesuada. Morbi in lacus sed lectus fermentum eleifend. Donec ut ornare leo. Praesent malesuada ullamcorper dolor ac pharetra. Sed justo purus, pretium eget scelerisque nec, vulputate et elit. Vestibulum tincidunt, urna et porttitor dignissim, orci eros pellentesque arcu, in porta ipsum elit vel nunc. Vestibulum id convallis sem. In et enim velit. Donec risus tellus, ornare vitae sapien vitae, dignissim lobortis erat. Curabitur nisi tellus, fringilla fringilla elit consectetur, pharetra porttitor neque. Curabitur pellentesque ultrices turpis sed tristique.
 
 Aenean et purus dapibus, tincidunt neque et, porta eros. Vestibulum blandit pharetra leo. Fusce dignissim eleifend nulla, id rhoncus magna consequat vel. In hac habitasse platea dictumst. Cras ac semper urna. Mauris consectetur purus eget dui tristique commodo. Vivamus lobortis dignissim lorem, quis efficitur tellus eleifend eu. Ut malesuada leo nec lacinia congue. Mauris facilisis scelerisque egestas. Aliquam porttitor augue quis est finibus feugiat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec egestas ex vitae urna malesuada, scelerisque dictum augue suscipit. Phasellus auctor ante sapien, iaculis eleifend eros malesuada vel.
 

@@ -140,22 +140,30 @@ a :hover {
 		max-width: 600px;
 	
 	}	
-#media_list {
+	#media_list {
 	position: absolute;
 	top: 1230px;
-}
-#recent_nodes {
+	right: 95%;
+	min-width: 300px;
+	}
+	#recent_nodes {
 	position: absolute;
 	top: 828px;
-}
-#node_list {
+	right: 95%
+	min-width: 300px;
+	}
+	#node_list {
 	position: absolute;
 	top: 875px;
-}
-#media_orgs {
+	right: 95%
+	min-width: 300px;
+	}
+	#media_orgs {
 	position: absolute;
 	top: 1170px;
-}
+	right: 95%
+	min-width: 300px;
+	}
 
 
 

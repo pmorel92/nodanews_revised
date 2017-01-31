@@ -82,7 +82,7 @@
 	width: 183px;
 	height: 55px;
 	position: absolute;
-	top: 423px;
+	top: 443px;
 	left: 5%;
 }
 
@@ -98,7 +98,7 @@
 	background-color: #f9f9f9;
 	min-width: 200px;
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-	top: 385px;
+	top: 420px;
 	z-index: 1;
 	left: 215px;
 }
@@ -136,7 +136,7 @@
 	border: none;
 	cursor: pointer;
 	position: absolute;
-	top: 595px;
+	top: 620px;
 	left: 5%;
 	z-index: 2;
 	font-family: courier-prime;
@@ -162,7 +162,7 @@
 	background-color: #f9f9f9;
 	min-width: 200px;
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-	top: 555px;
+	top: 600px;
 	z-index: 1;
 	left: 215px;
 }
@@ -200,7 +200,7 @@
 	border: none;
 	cursor: pointer;
 	position: absolute;
-	top: 763px;
+	top: 799px;
 	left: 5%;
 	z-index: 2;
 	font-family: courier-prime;
@@ -226,7 +226,7 @@
 	background-color: #f9f9f9;
 	min-width: 200px;
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-	top: 740px;
+	top: 780px;
 	z-index: 1;
 	left: 215px;
 }

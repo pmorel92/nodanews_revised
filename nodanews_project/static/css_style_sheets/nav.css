@@ -1,3 +1,4 @@
+@charset "utf-8";
 #logo {
 	width: 171px;
 	height: 80px;
@@ -5,6 +6,10 @@
 	top: 6px;
 	left: 0px;
 }
+a :hover {
+	color: gold
+}
+
 #banner {
 	width: 100%;
 	position: absolute;
@@ -109,7 +114,8 @@
 	background-color: #F5F3AF
 	}	
 #banner {
-	width: 214%;
+
+
 
 }
 

@@ -2,24 +2,24 @@
 #headline {
 	position: absolute;
 	top: 153px;
-	left: 5%;
+	left: 2%;
 }
 #headline_2 {
 	position: absolute;
-	top: 320px;
-	left: 5%;
+	top: 334px;
+	left: 2%;
 
 }
 #headline_3 {
 	position: absolute;
-	top: 489px;
-	left: 5%;
+	top: 506px;
+	left: 2%;
 
 }
 #headline_4 {
 	position: absolute;
-	top: 662px;
-	left: 5%;
+	top: 689px;
+	left: 2%;
 
 }
 a :hover {
@@ -66,7 +66,7 @@ a :hover {
 	background-image: linear-gradient(272deg,rgba(173,224,232,1.00) 0%,rgba(0,195,255,1.00) 100%);
 	border-radius: 15px;
 	list-style-type: none;
-	left: 60%;
+	right: 2%;
 }
 #node_list {
 	position: absolute;
@@ -77,10 +77,9 @@ a :hover {
 	background-image: linear-gradient(272deg,rgba(236,43,43,1.00) 0%,rgba(224,88,88,1.00) 100%);
 	border-radius: 15px;
 	list-style-type: none;
-	left: 60%;
+	right: 0%;
 }
 #index_image {
-	min-width: 1000px;
 	opacity: 0.2;
 	top: 165px;
 	position: absolute;
@@ -90,15 +89,15 @@ a :hover {
 #recent_nodes {
 	position: absolute;
 	top: 155px;
-	left: 60%;
 	width: 244px;
+	right: 0%;
 }
 
 #media_orgs {
 	position: absolute;
-	left: 60%;
 	top: 625px;
 	width: 324px;
+	right: 2%;
 }
 .buttons{
 	display: none
@@ -141,6 +140,25 @@ a :hover {
 		max-width: 600px;
 	
 	}	
+#media_list {
+	position: absolute;
+	top: 1230px;
+}
+#recent_nodes {
+	position: absolute;
+	top: 828px;
+}
+#node_list {
+	position: absolute;
+	top: 875px;
+}
+#media_orgs {
+	position: absolute;
+	top: 1170px;
+}
+
+
+
 
 	
 }

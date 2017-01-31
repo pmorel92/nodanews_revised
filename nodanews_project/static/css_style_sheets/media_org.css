@@ -40,11 +40,17 @@
 @media only screen and (max-width : 1000px) {
 
 	#media_org_logo{
-		max-width: 200px
+	max-width: 200px;
+	position: absolute;
+	left: 0%;
 			
 	}
 	#date_founded {
 	position: absolute;
 	left: 609px;
 	}
+#description {
+	font-size: x-large;
+}
+
 }

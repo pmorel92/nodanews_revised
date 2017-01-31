@@ -70,91 +70,19 @@ a :hover {
 .nav_menu_dropdown:hover .nav-content {
     display: block;
 }
-html {
-	font-size: 20px;
-}
-body {
-	background-color: #ccc;
-	padding: 50px;
-	text-align: center;
-}
-
-/* Wrapper */
-.icon-button {
-	background-color: white;
-	border-radius: 3.6rem;
-	cursor: pointer;
-	display: inline-block;
-	font-size: 2.0rem;
-	height: 3.6rem;
-	line-height: 3.6rem;
-	margin: 0 5px;
-	position: relative;
-	text-align: center;
-	-webkit-user-select: none;
-	   -moz-user-select: none;
-	    -ms-user-select: none;
-	        user-select: none;
-	width: 3.6rem;
-}
-
-/* Circle */
-.icon-button span {
-	border-radius: 0;
-	display: block;
-	height: 0;
-	left: 50%;
-	margin: 0;
+#facebook {
+	width: 75px;
 	position: absolute;
-	top: 50%;
-	-webkit-transition: all 0.3s;
-	   -moz-transition: all 0.3s;
-	     -o-transition: all 0.3s;
-	        transition: all 0.3s;
-	width: 0;
+	top: auto;
+	left: 41%;
+	height: 75px;
 }
-.icon-button:hover span {
-	width: 3.6rem;
-	height: 3.6rem;
-	border-radius: 3.6rem;
-	margin: -1.8rem;
-}
-.twitter span {
-	background-color: #4099ff;
-}
-.facebook span {
-	background-color: #3B5998;
-}
-
-/* Icons */
-.icon-button i {
-	background: none;
-	color: white;
-	height: 3.6rem;
-	left: 50%;
-	line-height: 3.6rem;
+#twitter {
+	width: 0px;
+	width: 75px;
+	height: 75px;
 	position: absolute;
-	bottom: 0%;
-	-webkit-transition: all 0.3s;
-	   -moz-transition: all 0.3s;
-	     -o-transition: all 0.3s;
-	        transition: all 0.3s;
-	width: 3.6rem;
-	z-index: 10;
-}
-.icon-button .icon-twitter {
-	color: #4099ff;
-}
-.icon-button .icon-facebook {
-	color: #3B5998;
-}
-.icon-button .icon-google-plus {
-	color: #db5a3c;
-}
-.icon-button:hover .icon-twitter,
-.icon-button:hover .icon-facebook,
-.icon-button:hover .icon-google-plus {
-	color: white;
+	left: 15%;
 }
 @media only screen and (max-width : 1000px) {
 	#node_dir{
@@ -199,12 +127,19 @@ body {
 	.nav-content a:hover {
 	background-color: #F5F3AF
 	}	
-#banner {
-
-
-
+#facebook {
+	position: absolute;
+	left: 31%;
+}
+#twitter {
+	position: absolute;
+	left: 31%;
+}
+	
+	
 }
 
 
-	}
+
+
 	

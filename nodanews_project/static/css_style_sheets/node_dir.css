@@ -15,8 +15,6 @@
 	left: 14%;
 	border-radius: 15px;
 	list-style-type: none;
-	-webkit-box-shadow: 3px 3px 9px 1px #524F4F;
-	box-shadow: 3px 3px 9px 1px #524F4F;
 }
 a :hover {
 	color: gold

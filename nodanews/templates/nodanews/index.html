@@ -15,7 +15,7 @@
 		<nav>
 			<a href="http://www.nodanews.com"><img src="{% static 'images/elements/nn_logo_horizontal.svg' %}" alt="" id="logo"></a>
 			<a href="http://www.twitter.com/NodanewsContact"<img src="{% static 'images/elements/twitter-128.png' %}" alt="" width="75px" height="75px" id="twitter"></a>
-			<a href="http://www.facebook.com/nodanews"<img src="{% static 'images/elements/fb-art.png' %}" alt="" id="facebook"></a>
+			<a href="http://www.facebook.com/nodanews"<img src="{% static 'images/elements/FB_logo.png' %}" alt="" id="facebook"></a>
    			<a href="http://www.nodanews.com/node_dir"><p id="node_dir">Node Directory</p></a>
     		<a href="http://www.nodanews.com/media_dir"><p id="media_dir">Media Org. Directory</p></a>
     		<a href="http://www.nodanews.com/about"><p id="about">About Noda News</p></a>
@@ -35,8 +35,8 @@
 	</div>
   	<div>
 	  <h1 id="headline">{{index.headline}}</h1>
-	  <img src="static 'images/elements/nn_logo_horizontal.svg' %} id="twitter">
-	  	  <img src="static 'images/elements/nn_logo_horizontal.svg' %}>
+	  <img src="{% static 'images/elements/nn_logo_horizontal.svg' %}" id="twitter">
+	  	  <img src="{% static 'images/elements/nn_logo_horizontal.svg' %}">
 	</div>
 	<div id="link_list">
 		<a href="{{index.Link_1}}" style="text-decoration: none;color: black" target="_blank"><h3 class="link">{{index.Link_1_title}}</h3></a>

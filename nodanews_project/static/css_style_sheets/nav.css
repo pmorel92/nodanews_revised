@@ -73,13 +73,11 @@ a :hover {
 #facebook {
 	width: 75px;
 	position: absolute;
-	top: auto;
 	left: 41%;
 	height: 75px;
 	display: block;
 }
 #twitter {
-	width: 0px;
 	width: 75px;
 	height: 75px;
 	position: absolute;

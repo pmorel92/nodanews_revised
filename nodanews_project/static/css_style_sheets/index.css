@@ -142,25 +142,25 @@ a :hover {
 	}	
 	#media_list {
 	position: relative;
-	top: 1130px;
+	top: 1110px;
 	min-width: 300px;
 	right: 49%;
 	}
 	#recent_nodes {
 	position: relative;
-	top: 825px;
+	top: 805px;
 	right: 65%;
 	min-width: 300px;
 	}
 	#node_list {
 	position: absolute;
-	top: 845px;
+	top: 825px;
 	right: 69%;
 	min-width: 300px;
 	}
 	#media_orgs {
 	position: absolute;
-	top: 1110px;
+	top: 1090px;
 	right: 56%;
 	min-width: 300px;
 	}

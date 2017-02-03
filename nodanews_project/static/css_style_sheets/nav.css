@@ -81,6 +81,12 @@
 	left: 15%;
 	display: block;
 }
+#footer{
+    position: absolute;
+    right: 15%;
+    bottom: 5%;
+    
+}   
 @media only screen and (max-width : 1000px) {
 	#node_dir{
 		display: none

@@ -32,6 +32,25 @@ class Node_Admin(admin.ModelAdmin):
     ]
 class Media_Org_Admin(admin.ModelAdmin):
 	fieldsets = [
+	    (None, {
+	        'fields': ('index_image', 'headline', 'headline_2', 'headline_3', 'headline_4')       
+	    }),
+        ('Links', {
+            'classes': ('collapse'),
+            'fields': ('link_1', 'link_1_title', 'link_2', 'link_2_title', 'link_3', 'link_3_title', 'link_4')
+        }),
+        ('Links', {
+            'classes': ('collapse'),
+            'fields': ('link_21', 'link_21_title', 'link_22', 'link_22_title', 'link_23', 'link_23_title', 'link_24')
+        }),
+        ('Links', {
+            'classes': ('collapse'),
+            'fields': ('link_31', 'link_31_title', 'link_32', 'link_32_title', 'link_33', 'link_33_title', 'link_34')
+        }),
+        ('Links', {
+            'classes': ('collapse'),
+            'fields': ('link_41', 'link_41_title', 'link_42', 'link_42_title', 'link_43', 'link_43_title', 'link_44')
+        }),
 
 	
 	]

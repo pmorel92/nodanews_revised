@@ -32,6 +32,12 @@ class Node_Admin(admin.ModelAdmin):
     ]
 class Media_Org_Admin(admin.ModelAdmin):
 	fieldsets = [
+
+	
+	]
+
+class Index_Admin(admin.ModelAdmin):
+	fieldsets = [
 	    (None, {
 	        'fields': ('index_image', 'headline', 'headline_2', 'headline_3', 'headline_4')       
 	    }),
@@ -51,13 +57,6 @@ class Media_Org_Admin(admin.ModelAdmin):
             'classes': ('collapse'),
             'fields': ('link_41', 'link_41_title', 'link_42', 'link_42_title', 'link_43', 'link_43_title', 'link_44')
         }),
-
-	
-	]
-
-class Index_Admin(admin.ModelAdmin):
-	fieldsets = [
-
 	
 	]	
 		

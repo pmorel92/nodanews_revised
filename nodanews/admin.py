@@ -43,19 +43,19 @@ class Index_Admin(admin.ModelAdmin):
 	    }),
         ('Links', {
             'classes': ('collapse'),
-            'fields': ('link_1', 'link_1_title', 'link_2', 'link_2_title', 'link_3', 'link_3_title', 'link_4')
+            'fields': ('Link_1', 'Link_1_title', 'Link_2', 'Link_2_title', 'Link_3', 'Link_3_title', 'Link_4')
         }),
         ('Links', {
             'classes': ('collapse'),
-            'fields': ('link_21', 'link_21_title', 'link_22', 'link_22_title', 'link_23', 'link_23_title', 'link_24')
+            'fields': ('Link_21', 'Link_21_title', 'Link_22', 'Link_22_title', 'Link_23', 'Link_23_title', 'Link_24')
         }),
         ('Links', {
             'classes': ('collapse'),
-            'fields': ('link_31', 'link_31_title', 'link_32', 'link_32_title', 'link_33', 'link_33_title', 'link_34')
+            'fields': ('Link_31', 'Link_31_title', 'Link_32', 'Link_32_title', 'Link_33', 'Link_33_title', 'Link_34')
         }),
         ('Links', {
             'classes': ('collapse'),
-            'fields': ('link_41', 'link_41_title', 'link_42', 'link_42_title', 'link_43', 'link_43_title', 'link_44')
+            'fields': ('Link_41', 'Link_41_title', 'Link_42', 'Link_42_title', 'Link_43', 'Link_43_title', 'Link_44')
         }),
 	
 	]	

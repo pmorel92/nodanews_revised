@@ -44,6 +44,7 @@ class Node(models.Model):
     my_take = models.TextField()
     node_image = models.ImageField(upload_to='media/nodes')
     video_embed = models.CharField(max_length=500, default='', blank=True)
+    ready = models.BooleanField(default=False)
     sources_title_1 = models.CharField(max_length=200, blank=True)
     sources_link_url = models.CharField(max_length=500, blank=True)
     sources_title_2 = models.CharField(max_length=200, blank=True)
@@ -160,6 +161,7 @@ class Media_Org(models.Model):
 	country = models.CharField(max_length=100, default='')
 	duplicate_country = models.BooleanField(default=True)
 	fake_or_not = models.BooleanField(default=False)
+	ready = models.BooleanField(default=False)
 	
 	def __str__(self):
 		return self.name

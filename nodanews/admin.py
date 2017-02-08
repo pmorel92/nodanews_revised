@@ -7,7 +7,7 @@ from .models import Node, Media_Org, Index
 class Node_Admin(admin.ModelAdmin):
     fieldsets = [
 	    (None, {
-		    'fields': ('headline', 'subject', 'country', 'date_posted', 'my_take', 'node_image', 'video_embed')
+		    'fields': ('headline', 'subject', 'country', 'date_posted', 'my_take', 'node_image', 'video_embed', 'ready')
         }),
         ('Sources Links', {
             'classes': ('collapse',),

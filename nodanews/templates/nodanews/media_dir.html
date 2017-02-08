@@ -37,12 +37,12 @@
 	<div>	
 		<ul id="media_list">	
 		{% for media_org in media_orgs %}
-			
+			{% if media_org.ready %}
 					<li style="list-style-type: none">
 							<a href="{{media_org.id}}" style="text-decoration:none; color: #000000" target="_blank"><h2>{{media_org.name}}</h2></a>
 							<h3 style="font-style: italic; font-weight: bold">{{media_org.bias}}/{{media_org.country}}</h3>
 					</li>	
-			
+			{% else %}
 		{% endfor %}
 		</ul>
 	</div>

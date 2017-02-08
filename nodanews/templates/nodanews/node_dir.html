@@ -37,10 +37,12 @@
 	<div>	
 		<ul id="node_list">
 			{% for node in nodes %}
-				<li>
-					<a href="{{node.id}}" target="_blank" style="text-decoration:none; color: #000000"><h2>{{node.headline}}</h2></a>
-					<h3 style="font-style: italic; font-weight: bold">{{node.subject}}/{{node.country}}</h3>
-				</li>
+				{% if node.ready %}
+					<li>
+						<a href="{{node.id}}" target="_blank" style="text-decoration:none; color: #000000"><h2>{{node.headline}}</h2></a>
+						<h3 style="font-style: italic; font-weight: bold">{{node.subject}}/{{node.country}}</h3>
+					</li>
+				{% else %}	
 			{% endfor %}
 		</ul>
 	</div>

@@ -103,10 +103,12 @@
 		<h1 id="recent_nodes">Recent Nodes</h1>	
 		<ul id="node_list">
 			{% for node in nodes %}
-				<li>
-					<a href="node_dir/{{node.id}}" target="_blank" style="text-decoration:none; color: #000000"><h2>{{node.headline}}</h2></a>
-					<h3 style="font-style: italic; font-weight: bold">{{node.subject}}/{{node.country}}</h3>
-				</li>
+				{% if node.ready %}	
+					<li>
+						<a href="node_dir/{{node.id}}" target="_blank" style="text-decoration:none; color: #000000"><h2>{{node.headline}}</h2></a>
+						<h3 style="font-style: italic; font-weight: bold">{{node.subject}}/{{node.country}}</h3>
+					</li>
+					{% endif %}
 			{% endfor %}
 		</ul>
 	</div>
@@ -114,10 +116,12 @@
 		<h1 id="media_orgs">Media Organizations</h1>	
 		<ul id="media_list">
 			{% for media_org in media_orgs %}
-				<li>
-					<a href="media_dir/{{media_org.id}}" style="text-decoration:none; color: #000000" target="_blank"><h2>{{media_org.name}}</h2></a>
-					<h3 style="font-style: italic; font-weight: bold">{{media_org.bias}}/{{media_org.country}}</h3>
-				</li>
+				{% if media_org.ready %}
+					<li>
+						<a href="media_dir/{{media_org.id}}" style="text-decoration:none; color: #000000" target="_blank"><h2>{{media_org.name}}</h2></a>
+						<h3 style="font-style: italic; font-weight: bold">{{media_org.bias}}/{{media_org.country}}</h3>
+					</li>
+				{% endif %}	
 			{% endfor %}
 		</ul>
 	</div>

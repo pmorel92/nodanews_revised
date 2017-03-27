@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import Node, Media_Org, Index
+from .models import Node, Media_Org
 
 
 class Node_Admin(admin.ModelAdmin):
@@ -36,30 +36,6 @@ class Media_Org_Admin(admin.ModelAdmin):
 	
 	]
 
-class Index_Admin(admin.ModelAdmin):
-	fieldsets = [
-	    (None, {
-	        'fields': ('index_image', 'headline', 'headline_2', 'headline_3', 'headline_4')       
-	    }),
-        ('Links 1', {
-            'classes': ('collapse',),
-            'fields': ('Link_1', 'Link_1_title', 'Link_2', 'Link_2_title', 'Link_3', 'Link_3_title')
-        }),
-        ('Links 2', {
-            'classes': ('collapse',),
-            'fields': ('Link_21', 'Link_21_title', 'Link_22', 'Link_22_title', 'Link_23', 'Link_23_title')
-        }),
-        ('Links 3', {
-            'classes': ('collapse',),
-            'fields': ('Link_31', 'Link_31_title', 'Link_32', 'Link_32_title', 'Link_33', 'Link_33_title')
-        }),
-        ('Links 4', {
-            'classes': ('collapse',),
-            'fields': ('Link_41', 'Link_41_title', 'Link_42', 'Link_42_title', 'Link_43', 'Link_43_title')
-        }),
-	
-	]	
-		
 admin.site.register(Node, Node_Admin)
 admin.site.register(Media_Org, Media_Org_Admin)
-admin.site.register(Index, Index_Admin)
+

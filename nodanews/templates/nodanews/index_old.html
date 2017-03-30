@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Noda News</title>
+{% load static from staticfiles %}
+<link href="{% static 'css_style_sheets/nav.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'css_style_sheets/index.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'css_style_sheets/index_dropdowns.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'favicon.ico' %}" rel='shortcut icon'>
+</head>
+
+<body>
+	<header>
+		<nav>
+			<a href="http://www.nodanews.com"><img src="{% static 'images/elements/nn_logo_horizontal.svg' %}" alt="" id="logo"></a>
+			<a href="http://www.twitter.com/NodanewsContact" target="_blank"><img src="{% static 'images/elements/twitter-128.png' %}" alt="" id="twitter"></a>
+			<a href="http://www.facebook.com/nodanews" target="_blank"><img src="{% static 'images/elements/FB_logo.png' %}" alt="" id="facebook"></a>
+   			<a href="http://www.nodanews.com/node_dir"><p id="node_dir">Node Directory</p></a>
+    		<a href="http://www.nodanews.com/media_dir"><p id="media_dir">Media Org. Directory</p></a>
+    		<a href="http://www.nodanews.com/about"><p id="about">About Noda News</p></a>
+    		<div class="nav_menu_dropdown">		
+   				<img src="{% static 'images/elements/Nav_menu-01.png' %}" class="nav_menu" alt="">
+   				<div class="nav-content">
+					<a href="http://www.nodanews.com/node_dir">Node Directory</a>
+					<a href="http://www.nodanews.com/media_dir">Media Org. Directory</a>
+					<a href="http://www.nodanews.com/about">About Noda News</a>
+				</div>
+			</div>
+	    </nav>
+    <img src="{% static 'images/elements/banner_orange.svg' %}" alt="" id="banner">
+    </header>
+	<div>
+  <img src="https://nodastorage.s3.amazonaws.com/media/{{index.index_image}}" id="index_image" alt=""/> 
+	</div>
+  	<div>
+	  <h1 id="headline">{{index.headline}}</h1>
+	</div>
+	<div id="link_list">
+		<a href="{{index.Link_1}}" style="text-decoration: none;color: black" target="_blank"><h3 class="link">{{index.Link_1_title}}</h3></a>
+	  	<a href="{{index.Link_2}}" style="text-decoration: none;color: black" target="_blank"><h3 class="link">{{index.Link_2_title}}</h3></a>
+		<a href="{{index.Link_3}}" style="text-decoration: none;color: black" target="_blank"><h3 class="link">{{index.Link_3_title}}</h3></a>
+	</div>
+	<div>
+		<h1 id="headline_2">{{index.headline_2}}</h1>
+	</div>
+	<div id="link_list_2">
+		<a href="{{index.Link_21}}" style="text-decoration: none;color: black" target="_blank"><h3 class="link">{{index.Link_21_title}}</h3></a>
+	  	<a href="{{index.Link_22}}" style="text-decoration: none;color: black" target="_blank"><h3 class="link">{{index.Link_22_title}}</h3></a>
+		<a href="{{index.Link_23}}" style="text-decoration: none;color: black" target="_blank"><h3 class="link">{{index.Link_23_title}}</h3></a>
+	</div>
+		<div>
+		<h1 id="headline_3">{{index.headline_3}}</h1>
+	</div>
+	<div id="link_list_3">
+		<a href="{{index.Link_31}}" style="text-decoration: none;color: black" target="_blank"><h3 class="link">{{index.Link_31_title}}</h3></a>
+	  	<a href="{{index.Link_32}}" style="text-decoration: none;color: black" target="_blank"><h3 class="link">{{index.Link_32_title}}</h3></a>
+		<a href="{{index.Link_33}}" style="text-decoration: none;color: black" target="_blank"><h3 class="link">{{index.Link_33_title}}</h3></a>
+	</div>
+		<div>
+		<h1 id="headline_4">{{index.headline_4}}</h1>
+	</div>
+	<div id="link_list_4">
+		<a href="{{index.Link_41}}" style="text-decoration: none;color: black" target="_blank"><h3 class="link">{{index.Link_41_title}}</h3></a>
+	  	<a href="{{index.Link_42}}" style="text-decoration: none;color: black" target="_blank"><h3 class="link">{{index.Link_42_title}}</h3></a>
+		<a href="{{index.Link_43}}" style="text-decoration: none;color: black" target="_blank"><h3 class="link">{{index.Link_43_title}}</h3></a>
+	</div>
+	<div class="buttons">	
+	<div class="sdropdown">
+  <button class="sdropbtn">LEARN MORE</button>
+  <div class="sdropdown-content">
+    <a href="{{index.Link_1}}" target="_blank">{{index.Link_1_title}}</a>
+    <a href="{{index.Link_2}}" target="_blank">{{index.Link_2_title}}</a>
+    <a href="{{index.Link_3}}" target="_blank">{{index.Link_3_title}}</a>
+  </div>
+</div>
+<div class="s2dropdown">
+  <button class="s2dropbtn">LEARN MORE</button>
+  <div class="s2dropdown-content">
+    <a href="{{index.Link_21}}" target="_blank">{{index.Link_21_title}}</a>
+    <a href="{{index.Link_22}}" target="_blank">{{index.Link_22_title}}</a>
+    <a href="{{index.Link_23}}" target="_blank">{{index.Link_23_title}}</a>
+  </div>
+</div>
+	<div class="s3dropdown">
+  <button class="s3dropbtn">LEARN MORE</button>
+  <div class="s3dropdown-content">
+    <a href="{{index.Link_31}}" target="_blank">{{index.Link_31_title}}</a>
+    <a href="{{index.Link_32}}" target="_blank">{{index.Link_32_title}}</a>
+    <a href="{{index.Link_33}}" target="_blank">{{index.Link_33_title}}</a>
+  </div>
+</div>
+	<div class="s4dropdown">
+  <button class="s4dropbtn">LEARN MORE</button>
+  <div class="s4dropdown-content">
+    <a href="{{index.Link_41}}" target="_blank">{{index.Link_41_title}}</a>
+    <a href="{{index.Link_42}}" target="_blank">{{index.Link_42_title}}</a>
+    <a href="{{index.Link_43}}" target="_blank">{{index.Link_43_title}}</a>
+  </div>
+</div>
+	</div>
+	<div class="responsive">
+		<h1 id="recent_nodes">Recent Nodes</h1>	
+		<ul id="node_list">
+			{% for node in nodes %}
+				{% if node.ready %}	
+					<li>
+						<a href="node_dir/{{node.id}}" target="_blank" style="text-decoration:none; color: #000000"><h2>{{node.headline}}</h2></a>
+						<h3 style="font-style: italic; font-weight: bold">{{node.subject}}/{{node.country}}</h3>
+					</li>
+					{% endif %}
+			{% endfor %}
+		</ul>
+	</div>
+	<div class="responsive">
+		<h1 id="media_orgs">Media Organizations</h1>	
+		<ul id="media_list">
+			{% for media_org in media_orgs %}
+				{% if media_org.ready %}
+					<li>
+						<a href="media_dir/{{media_org.id}}" style="text-decoration:none; color: #000000" target="_blank"><h2>{{media_org.name}}</h2></a>
+						<h3 style="font-style: italic; font-weight: bold">{{media_org.bias}}/{{media_org.country}}</h3>
+					</li>
+				{% endif %}	
+			{% endfor %}
+		</ul>
+	</div>
+	<footer>
+		<h4 id="footer">Questions? Comments? Any content you want to share with me?<br>Please send everything to contact@nodanews.com</h4>
+	</footer>
+</body>
+</html>

@@ -1,172 +1,74 @@
 @charset "utf-8";
-#headline {
-	position: absolute;
-	top: 153px;
-	left: 2%;
-}
-#headline_2 {
-	position: absolute;
-	top: 334px;
-	left: 2%;
 
-}
-#headline_3 {
-	position: absolute;
-	top: 506px;
-	left: 2%;
-
-}
-#headline_4 {
-	position: absolute;
-	top: 689px;
-	left: 2%;
-
-}
-a :hover {
-	color: gold
-}
-#link_list  {
-	position: absolute;
-	top: 221px;
-	left: 10%;
-	font-family: Century;
-	font-style: italic;
-
-}
-#link_list_2 {
-	position: absolute;
-	top: 385px;
-	left: 10%;
-	font-family: Century;
-	font-style: italic;
-
-}
-#link_list_3  {
-	position: absolute;
-	top: 565px;
-	left: 10%;
-	font-family: Century;
-	font-style: italic;
-
-}
-#link_list_4  {
-	position: absolute;
-	top: 747px;
-	left: 10%;
-	font-family: Century;
-	font-style: italic;
-
-}
-#media_list {
-	position: absolute;
-	top: 685px;
-	background-image: -webkit-linear-gradient(178deg,rgba(173,224,232,1.00) 0%,rgba(0,195,255,1.00) 100%);
-	background-image: -moz-linear-gradient(178deg,rgba(173,224,232,1.00) 0%,rgba(0,195,255,1.00) 100%);
-	background-image: -o-linear-gradient(178deg,rgba(173,224,232,1.00) 0%,rgba(0,195,255,1.00) 100%);
-	background-image: linear-gradient(272deg,rgba(173,224,232,1.00) 0%,rgba(0,195,255,1.00) 100%);
-	border-radius: 15px;
-	list-style-type: none;
-	right: 2%;
-}
-#node_list {
-	position: absolute;
-	top: 208px;
-	background-image: -webkit-linear-gradient(178deg,rgba(236,43,43,1.00) 0%,rgba(224,88,88,1.00) 100%);
-	background-image: -moz-linear-gradient(178deg,rgba(236,43,43,1.00) 0%,rgba(224,88,88,1.00) 100%);
-	background-image: -o-linear-gradient(178deg,rgba(236,43,43,1.00) 0%,rgba(224,88,88,1.00) 100%);
-	background-image: linear-gradient(272deg,rgba(236,43,43,1.00) 0%,rgba(224,88,88,1.00) 100%);
-	border-radius: 15px;
-	list-style-type: none;
-	right: 0%;
-}
-#index_image {
-	opacity: 0.2;
-	top: 165px;
-	position: absolute;
-	left: 26px;
-}
-
-#recent_nodes {
-	position: absolute;
-	top: 155px;
-	width: 244px;
-	right: 0%;
-}
-
-#media_orgs {
-	position: absolute;
-	top: 625px;
-	width: 324px;
-	right: 2%;
-}
-.buttons{
-	display: none
-}
-
-@media only screen and (max-width : 1000px) {
-.responsive {
-	position: absolute;
-	right: 357px;
-}
-
-	.buttons{
-	display: block
-}
-	#link_list{
-	display: none;	
-	}
-	#link_list_2{
-	display: none;	
-	}
-	#link_list_3{
-	display: none;	
-	}
-	#link_list_4{
-	display: none;	
-	}
-	#headline{
-		max-width: 600px;
-	
-	}	
-	#headline_2{
-		max-width: 600px;
-	
-	}	
-	#headline_3{
-		max-width: 600px;
-	
-	}	
-	#headline_4{
-		max-width: 600px;
-	
-	}	
-	#media_list {
+.node {
+	width: 700px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	display: block;
+	margin-left: 20px;
 	position: relative;
-	top: 1110px;
-	min-width: 300px;
-	right: 49%;
-	}
-	#recent_nodes {
+	float: left;
+	color: #000000;
+	text-decoration: none;
+}
+
+.my_take {
+	color: #000000;
+	font-family: Century;
+	height: 200px;
+	overflow-y: hidden;
+	background-image: -webkit-linear-gradient(270deg,rgba(255,255,255,1.00) 70.98%,rgba(0,0,0,1.00) 100%);
+	background-image: -moz-linear-gradient(270deg,rgba(255,255,255,1.00) 70.98%,rgba(0,0,0,1.00) 100%);
+	background-image: -o-linear-gradient(270deg,rgba(255,255,255,1.00) 70.98%,rgba(0,0,0,1.00) 100%);
+	background-image: linear-gradient(180deg,rgba(255,255,255,1.00) 70.98%,rgba(0,0,0,1.00) 100%);
+	font-size: large;
+}
+
+.headline {
+	max-width: 750px;
 	position: relative;
-	top: 805px;
-	right: 65%;
-	min-width: 300px;
-	}
-	#node_list {
-	position: absolute;
-	top: 825px;
-	right: 69%;
-	min-width: 300px;
-	}
-	#media_orgs {
-	position: absolute;
-	top: 1090px;
-	right: 56%;
-	min-width: 300px;
-	}
+	color: #000000;
+}
+.image_1 {
+	position: relative;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	margin-right: 10px;
+	display: block;
+	margin-left: -346px;
+	opacity: 1;
+	width: 400px;
+	float: right;
+	clear: right;
+}
+
+@media (max-width: 1152px){
+.node {
+}
+.image_1 {
+	width: 300px;
 
 
 
+}
+.my_take {
+	font-size: x-large;
+}
 
-	
+
+
+}
+
+@media (max-width: 1000px){
+.image_1 {
+	width: 150px;
+}
+
+}
+
+@media (max-width: 876px){
+.image_1 {
+	display: none;
+}
+
 }

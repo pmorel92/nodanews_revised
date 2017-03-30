@@ -9,9 +9,10 @@
 
 #banner {
 	width: 100%;
-	position: absolute;
+	position: relative;
 	top: 86px;
 	left: 0px;
+	margin-bottom: 44px;
 }
 #node_dir {
 	color: #000000;
@@ -41,14 +42,14 @@
 	text-decoration: none;
 	position: absolute;
 	top: 32px;
-	left: 87%;
 	font-size: x-large;
 	min-width: 223px;
 	text-shadow: 2px 2px 10px #BBB5B5;
+	right: 0px;
 
 }
 
-	.nav_menu {
+.nav_menu {
 	width: 100px;
 	height: 100px;
 	position: absolute;
@@ -70,23 +71,27 @@
 #facebook {
 	width: 75px;
 	position: absolute;
+	top: 5px;
 	left: 41%;
 	height: 75px;
 	display: block;
 }
 #twitter {
+	width: 0px;
 	width: 75px;
 	height: 75px;
 	position: absolute;
 	left: 15%;
+    top: 5px;
 	display: block;
 }
 #footer{
-    position: absolute;
-    right: 15%;
-    bottom: 5%;
+    position: fixed;
+	bottom: 0px;
+    right: 0px;
+    margin: 10px;
     
-}   
+}    
 @media only screen and (max-width : 1000px) {
 	#node_dir{
 		display: none
@@ -103,7 +108,7 @@
 	.nav_menu:hover + .nav-content{
 		display: inline-block
 	}
-	.nav-content{
+.nav-content{
 	position: absolute;
 	background-color: #f9f9f9;
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -132,11 +137,11 @@
 	}	
 #facebook {
 	position: absolute;
-	left: 31%;
+	left: 50%;
 }
 #twitter {
 	position: absolute;
-	left: 31%;
+	left: 75%;
 }
 	
 	

@@ -28,16 +28,22 @@
 				</div>
 			</div>
 	    </nav>
-    <img src="{% static 'images/elements/banner_orange.svg' %}" alt="" id="banner">
+    <img src="{% static 'images/elements/banner_red.svg' %}" alt="" id="banner">
     </header>
-    {% for node in nodes %}
-<a href="http://www.nodanews.com/node/{{node.id}}" style="text-decoration: none;color: black" target="_blank">
-	<div class="node">	
-		<h1 class="headline">{{node.headline}}</h1>
-	<p class="my_take">{{node.my_take|linebreaksbr}}</p>
-	<a href="www.nodanews.com/node-dir/{{node.node_direc.id}}" style="text-decoration: none;color: red" target="_blank"><h3> Related to {{node.node_direc}}</h3></a> 
- </div>
-	<img src="https://nodastorage.s3.amazonaws.com/media/{{node.head_image}}" class="image_1" alt=""/></a>
+<h1 id="title">{{node.node_dir}}</h1>'
+	{% for node in nodes %}
+	{% if node.hotness == 1 %}
+	<a href="www.nodanews.com/node/{{node.id}}"><h3 class="nodes_red">{{node.headline}}</h3></a>
+	{% end if %}
+	{% if node.hotness == 2 %}
+	<a href="www.nodanews.com/node/{{node.id}}"><h3 class="nodes_yellow">{{node.headline}}</h3></a>
+	{% end if %}
+	{% if node.hotness == 3 %}
+	<a href="www.nodanews.com/node/{{node.id}}"><h3 class="nodes_blue">{{node.headline}}</h3></a>
+	{% end if %}
+	{% if node.hotness == 4 %}
+	<a href="www.nodanews.com/node/{{node.id}}"><h3 class="nodes_green">{{node.headline}}</h3></a>
+	{% end if %}
 	{% endfor %}
 </body>
 </html>

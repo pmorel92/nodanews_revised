@@ -5,8 +5,7 @@
 <title>Noda News</title>
 {% load static from staticfiles %}
 <link href="{% static 'css_style_sheets/nav.css' %}" rel="stylesheet" type="text/css">
-<link href="{% static 'css_style_sheets/index.css' %}" rel="stylesheet" type="text/css">
-<link href="{% static 'css_style_sheets/index_dropdowns.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'css_style_sheets/node_dir.css' %}" rel="stylesheet" type="text/css">
 <link href="{% static 'favicon.ico' %}" rel='shortcut icon'>
 </head>
 
@@ -14,8 +13,8 @@
 	<header>
 		<nav>
 			<a href="http://www.nodanews.com"><img src="{% static 'images/elements/nn_logo_horizontal.svg' %}" alt="" id="logo"></a>
-			<a href="http://www.twitter.com/NodanewsContact" target="_blank"><img src="{% static 'images/elements/twitter-128.png' %}" alt="" id="twitter"></a>
-			<a href="http://www.facebook.com/nodanews" target="_blank"><img src="{% static 'images/elements/FB_logo.png' %}" alt="" id="facebook"></a>
+			<a href="http://www.twitter.com/NodanewsContact"<img src="{% static 'images/elements/twitter-128.png' %}" alt="" id="twitter"></a>
+			<a href="http://www.facebook.com/nodanews"<img src="{% static 'images/elements/fb-art.png' %}" alt="" id="facebook"></a>
    			<a href="http://www.nodanews.com/node_dir"><p id="node_dir">Node Directory</p></a>
     		<a href="http://www.nodanews.com/media_dir"><p id="media_dir">Media Org. Directory</p></a>
     		<a href="http://www.nodanews.com/about"><p id="about">About Noda News</p></a>
@@ -28,33 +27,32 @@
 				</div>
 			</div>
 	    </nav>
-    <img src="{% static 'images/elements/banner_blue.svg' %}" alt="" id="banner">
-    </header>		
-	<div>
-	  	<h1 id="title">Media Organization Directory</h1>	
-		<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Media Org. names..">	
-	</div>
-	{% block primary %}
+    <img src="{% static 'images/elements/banner_red.svg' %}" alt="" id="banner">
+    </header>
+  	<div>
+		<h1 id="title">Node Directory</h1>
+	<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Node titles..">
+	</div>  		
+	
 	<div>	
-		<ul id="media_list">	
-		{% for media_org in media_orgs %}
-			{% if media_org.ready %}
-					<li style="list-style-type: none">
-							<a href="{{media_org.id}}" style="text-decoration:none; color: #000000" target="_blank"><h2>{{media_org.name}}</h2></a>
-							<h3 style="font-style: italic; font-weight: bold">{{media_org.bias}}/{{media_org.country}}</h3>
-					</li>	
-			{% else %}
-			{% endif %}
-		{% endfor %}
+		<ul id="node_list">
+			{% for node in nodes %}
+				{% if node.ready %}
+					<li>
+						<a href="{{node.id}}" target="_blank" style="text-decoration:none; color: #000000"><h2>{{node.headline}}</h2></a>
+						<h3 style="font-style: italic; font-weight: bold">{{node.subject}}/{{node.country}}</h3>
+					</li>
+				{% else %}
+				{% endif %}
+			{% endfor %}
 		</ul>
 	</div>
-	
 <script>
 function myFunction() {
     var input, filter, ul, li, a, i;
     input = document.getElementById('myInput');
     filter = input.value.toUpperCase();
-    ul = document.getElementById("media_list");
+    ul = document.getElementById("node_list");
     li = ul.getElementsByTagName('li');
 
    
@@ -68,10 +66,8 @@ function myFunction() {
     }
 }
 </script>
-
-		{% endblock %}
 	<footer>
 		<h4 id="footer">Questions? Comments? Any content you want to share with me?<br>Please send everything to contact@nodanews.com</h4>
-	</footer>	
+	</footer>
 </body>
 </html>

@@ -1,0 +1,221 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Noda News</title>
+{% load static from staticfiles %}
+<link href="{% static 'css_style_sheets/nav.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'css_style_sheets/node.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'favicon.ico' %}"rel='shortcut icon'>
+</head>
+
+<body>
+		<nav>
+			<a href="http://www.nodanews.com"><img src="{% static 'images/elements/nn_logo_horizontal.svg' %}" alt="" id="logo"></a>
+			<a href="http://www.twitter.com/NodanewsContact"<img src="{% static 'images/elements/twitter-128.png' %}" alt="" id="twitter"></a>
+			<a href="http://www.facebook.com/nodanews"<img src="{% static 'images/elements/fb-art.png' %}" alt="" id="facebook"></a>
+   			<a href="http://www.nodanews.com/node_dir"><p id="node_dir">Node Directory</p></a>
+    		<a href="http://www.nodanews.com/media_dir"><p id="media_dir">Media Org. Directory</p></a>
+    		<a href="http://www.nodanews.com/about"><p id="about">About Noda News</p></a>
+    		<div class="nav_menu_dropdown">		
+   				<img src="{% static 'images/elements/Nav_menu-01.png' %}" class="nav_menu" alt="">
+   				<div class="nav-content">
+					<a href="http://www.nodanews.com/node_dir">Node Directory</a>
+					<a href="http://www.nodanews.com/media_dir">Media Org. Directory</a>
+					<a href="http://www.nodanews.com/about">About Noda News</a>
+				</div>
+			</div>
+	    </nav>
+    <img src="{% static 'images/elements/banner_red.svg' %}" alt="" id="banner"> 
+    </header>
+	<div>
+	  <p id="headline">{{node.headline}}</p>
+	</div>
+	<div>
+    <img src="https://nodastorage.s3.amazonaws.com/media/{{node.node_image}}" id="node_img" alt=""/> </div>
+    <div>
+		<p id="my_take">{{node.my_take|linebreaksbr}}</p>
+	</div>
+	<div>
+		<h2 id="sources">Sources</h2>
+	  		<ul class="link_list" style="list-style-type: none">
+				<li>
+				<a href="{{node.sources_link_url}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{node.sources_title_1}}</h4></a>
+				</li>
+				<li>
+					<a href="{{node.sources_link_url_2}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{node.sources_title_2}}</h4></a>
+				</li>
+				<li>
+					<a href="{{node.sources_link_url_3}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{node.sources_title_3}}</h4></a>
+				</li>
+				<li>
+					<a href="{{node.sources_link_url_4}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{node.sources_title_4}}</h4></a>
+				</li>
+				<li>
+					<a href="{{node.sources_link_url_5}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{node.sources_title_5}}</h4></a>
+				</li>
+				<li>
+					<a href="{{node.sources_link_url_6}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{node.sources_title_6}}</h4></a>
+				</li>
+				<li>
+					<a href="{{node.sources_link_url_7}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{node.sources_title_7}}</h4></a>
+				</li>
+				<li>
+					<a href="{{node.sources_link_url_8}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{node.sources_title_8}}</h4></a>
+				</li>
+				<li>
+					<a href="{{node.sources_link_url_9}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{node.sources_title_9}}</h4></a>
+				</li>
+				<li>
+					<a href="{{node.sources_link_url_10}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{node.sources_title_10}}</h4></a>
+				</li>
+	  		</ul>
+	</div>
+	<div>
+		<h2 id="wikipedia">Wikipedia</h2>
+    		<ul class="wikipedia_list" style="list-style-type: none">
+				<li>
+					<a href="{{node.wikipedia_link_url_}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{node.wikipedia_title_1}}</h4></a>
+				</li>
+				<li>
+					<a href="{{node.wikipedia_link_url_2}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{node.wikipedia_title_2}}</h4></a>
+				</li>
+				<li>
+					<a href="{{node.wikipedia_link_url_3}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{node.wikipedia_title_3}}</h4></a>
+				</li>
+				<li>
+					<a href="{{node.wikipedia_link_url_4}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{node.wikipedia_title_4}}</h4></a>
+				</li>
+				<li>
+					<a href="{{node.wikipedia_link_url_5}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{node.wikipedia_title_5}}</h4></a>
+				</li>
+				<li>
+					<a href="{{node.wikipedia_link_url_6}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{node.wikipedia_title_6}}</h4></a>
+				</li>
+				<li>
+					<a href="{{node.wikipedia_link_url_7}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{node.wikipedia_title_7}}</h4></a>
+				</li>
+				<li>
+					<a href="{{node.wikipedia_link_url_8}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{node.wikipedia_title_8}}</h4></a>
+				</li>
+				<li>
+					<a href="{{node.wikipedia_link_url_9}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{node.wikipedia_title_9}}</h4></a>
+				</li>
+				<li>
+					<a href="{{node.wikipedia_link_url_10}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{node.wikipedia_title_10}}</h4></a>
+				</li>
+			</ul>	
+
+	</div>
+	<div>
+		<h2 id="academic">Academic</h2>
+			<ul class="academic_list" style="list-style-type: none">
+				<li>
+					<a href="{{node.academic_link_url}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{node.academic_title_1}}</h4></a>
+				</li>
+				<li>
+					<a href="{{node.academic_link_url_2}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{node.academic_title_2}}</h4></a>
+				</li>
+				<li>
+					<a href="{{node.academic_link_url_3}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{node.academic_title_3}}</h4></a>
+				</li>
+				<li>
+					<a href="{{node.academic_link_url_4}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{node.academic_title_4}}</h4></a>
+				</li>
+				<li>
+					<a href="{{node.academic_link_url_5}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{node.academic_title_5}}</h4></a>
+				</li>
+				<li>
+					<a href="{{node.academic_link_url_6}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{node.academic_title_6}}</h4></a>
+				</li>
+				<li>
+					<a href="{{node.academic_link_url_7}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{node.academic_title_7}}</h4></a>
+				</li>
+				<li>
+					<a href="{{node.academic_link_url_8}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{node.academic_title_8}}</h4></a>
+				</li>
+				<li>
+					<a href="{{node.academic_link_url_9}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{node.academic_title_9}}</h4></a>
+				</li>
+				<li>
+					<a href="{{node.academic_link_url_10}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{node.academic_title_10}}</h4></a>
+				</li>
+			</ul>	
+	</div>
+	<div>
+		<h2 id="nodes_title">Related Nodes</h2>
+			<ul class="node_list" style="list-style-type: none">
+				<li>
+					<a href="{{node.nodes_link_url}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{node.nodes_title_1}}</h4></a>
+				</li>
+				<li>
+					<a href="{{node.nodes_link_url_2}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{node.nodes_title_2}}</h4></a>
+				</li>
+				<li>
+					<a href="{{node.nodes_link_url_3}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{node.nodes_title_3}}</h4></a>
+				</li>
+				<li>
+					<a href="{{node.nodes_link_url_4}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{node.nodes_title_4}}</h4></a>
+				</li>
+				<li>
+					<a href="{{node.nodes_link_url_5}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{node.nodes_title_5}}</h4></a>
+				</li>
+				<li>
+					<a href="{{node.nodes_link_url_6}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{node.nodes_title_6}}</h4></a>
+				</li>
+				<li>
+					<a href="{{node.nodes_link_url_7}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{node.nodes_title_7}}</h4></a>
+				</li>
+				<li>
+					<a href="{{node.nodes_link_url_8}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{node.nodes_title_8}}</h4></a>
+				</li>
+				<li>
+					<a href="{{node.nodes_link_url_9}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{node.nodes_title_9}}</h4></a>
+				</li>
+				<li>
+					<a href="{{node.nodes_link_url_10}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{node.nodes_title_10}}</h4></a>
+				</li>
+			</ul>	
+	</div>
+	<div>
+		<h2 id="video">Video</h2>
+		<iframe id="video_embed" width="420" height="236" src="{{node.video_embed}}" frameborder="0" allowfullscreen></iframe>
+		<ul id="video_list" style="list-style-type: none">
+			<li>
+					<a href="{{node.video_link_url}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{node.video_title_1}}</h4></a>
+				</li>
+				<li>
+					<a href="{{node.video_link_url_2}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{node.video_title_2}}</h4></a>
+				</li>
+				<li>
+					<a href="{{node.video_link_url_3}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{node.video_title_3}}</h4></a>
+				</li>
+				<li>
+					<a href="{{node.video_link_url_4}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{node.video_title_4}}</h4></a>
+				</li>
+				<li>
+					<a href="{{node.video_link_url_5}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{node.video_title_5}}</h4></a>
+				</li>
+				<li>
+					<a href="{{node.video_link_url_6}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{node.video_title_6}}</h4></a>
+				</li>
+				<li>
+					<a href="{{node.video_link_url_7}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{node.video_title_7}}</h4></a>
+				</li>
+				<li>
+					<a href="{{node.video_link_url_8}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{node.video_title_8}}</h4></a>
+				</li>
+				<li>
+					<a href="{{node.video_link_url_9}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{node.video_title_9}}</h4></a>
+				</li>
+				<li>
+					<a href="{{node.video_link_url_10}}" target="_blank" style="text-decoration:none; color: #000000"><h4>{{node.video_title_10}}</h4></a>
+				</li>
+		</ul>
+	</div>   
+   	<footer>
+		<h4 id="footer">Questions? Comments? Any content you want to share with me?<br>Please send everything to contact@nodanews.com</h4>
+	</footer>
+
+</body>
+</html>

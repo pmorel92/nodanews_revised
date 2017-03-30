@@ -2,231 +2,166 @@
 #headline {
 	position: absolute;
 	top: 149px;
-	left: 24%;
 	font-family: Century;
 	font-size: xx-large;
+	left: 78px;
 }
-#node_img {
-	width: 674px;
-	height: 808px;
+#related {
 	position: absolute;
-	top: 240px;
-	left: 375px;
-	opacity: 0.2;
+	top: 153px;
+	right: 15px;
+	background-color: #FFFD00;
+	border-collapse: collapse;
+	border-radius: 2px;
+	-webkit-box-shadow: 1px 1px 5px;
+	box-shadow: 1px 1px 5px;
 }
-#my_take {
+
+a:hover {
+	background-color: yellow;
+	color: #FF0004;
+}
+.hotness {
+	position: absolute;
+	top: 161px;
+	display: block;
+}
+#red {
+	width: 0;
+	height: 0;
+	border-top: 50px solid transparent;
+	border-left: 100px solid red;
+	border-bottom: 50px solid transparent;
+	display: block;
+}
+#yellow {
+	width: 0;
+	height: 0;
+	border-top: 50px solid transparent;
+	border-left: 100px solid yellow;
+	border-bottom: 50px solid transparent;
+	display: block;
+}
+#blue {
+	width: 0;
+	height: 0;
+	border-top: 50px solid transparent;
+	border-left: 100px solid blue;
+	border-bottom: 50px solid transparent;
+}
+	#green {
+	width: 0;
+	height: 0;
+	border-top: 50px solid transparent;
+	border-left: 100px solid green;
+	border-bottom: 50px solid transparent;
+}
+	
+#image_1 {
+	width: 500px;
+	position: absolute;
+	right: 20px;
+	top: 223px;
+}
+#image_2 {
+	width: 500px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	clear: both;
+	float: right;
+	margin-right: 20px;
+
+}
+.perspective {
 	width: 600px;
+	overflow-y: scroll;
+	position: relative;
+	margin-top: 20px;
+	margin-left: 100px;
+	margin-bottom: 20px;
+}
+#videos {
 	position: absolute;
-	top: 245px;
-	left: 446px;
-	font-family: Century;
-	font-size: large;
+	top: 506px;
+	right: 20px;
+}
+.video_embed{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	clear: both;
+	float: right;
+	margin-right: 20px;
+}
+
+.heading {
+	text-align: center;
 }
 .link_list {
-	position: absolute;
-	top: 247px;
-	left: 3%;
-	background-color: #F91219;
-	width: 253px;
-	min-width: 253px;
-	border-radius: 34px;
-	max-width: 300px;
-	min-height: 107px;
-	max-height: 207px;
-	overflow-y: auto;
-	height: 207px;
-
+	list-style-type: none;
 }
 
-a li:hover {
-	color: gold
-}
-a li {
-	font-style: italic;
-	font-size: large;
-	right: auto;
-}
-#video {
-	position: absolute;
-	top: 553px;
-	font-family: Century;
-	font-weight: bold;
-	right: 8%;
-	font-size: xx-large;
-}
-#video_embed {
-	top: 335px;
-	position: absolute;
-	right: 2%;
-	padding-left: 20px;
-}
-#video_list {
-	position: absolute;
-	top: 627px;
-	right: 2%;
-	font-family: Century;
-	font-size: large;
-	background-color: #F3F912;
-	min-width: 250px;
-	border-radius: 34px;
-	min-height: 89px;
-	max-height: 175px;
-	overflow-y: auto;
 
-}
-#academic {
-	position: absolute;
-	top: 614px;
-	left: 9%;
-	font-family: Century;
-	font-weight: bold;
-}
 
-#sources {
-	font-family: Century;
-	font-weight: bold;
-	position: absolute;
-	top: 197px;
-	left: 9%;
-	font-size: x-large;
-}
-#wikipedia {
-	font-family: Century;
-	font-weight: bold;
-	position: absolute;
-	top: 460px;
-	left: 9%;
-}
-.wikipedia_list{
-	position: absolute;
-	top: 503px;
-	left: 3%;
-	background-color: #0E55FF;
-	width: 253px;
-	min-width: 253px;
-	border-radius: 34px;
-	max-width: 300px;
-	min-height: 107px;
-	overflow-y: auto;
-	height: 104px;
-	max-height: 104px;
-
-}
-
-.academic_list{
-	position: absolute;
-	top: 663px;
-	left: 3%;
-	background-color: #00A317;
-	width: 253px;
-	min-width: 253px;
-	border-radius: 34px;
-	max-width: 300px;
-	min-height: 107px;
-	max-height: 100px;
-	overflow-y: auto;
-	height: 100px;
-
-}
-
-#nodes_title {
-	font-family: Century;
-	font-weight: bold;
-	position: absolute;
-	top: 780px;
-	left: 9%;
-}
-
-.node_list{
-	position: absolute;
-	top: 828px;
-	left: 3%;
-	background-color: #C700DB;
-	width: 253px;
-	min-width: 253px;
-	border-radius: 34px;
-	max-width: 300px;
-	min-height: 107px;
-	max-height: 175px;
-	overflow-y: auto;
-
-}
-
-@media only screen and (max-width : 1500px) {
-	
-	#video_embed {
-	position: absolute;
-	top: 1072px;
-	left: 0%;
-}
-	#video_list{
-	position: absolute;
-	left: 0%;
-	top: 1314px;
-	width: 255px;
-	padding-top: 20px;
-	padding-right: 20px;
-	padding-bottom: 20px;
-	padding-left: 20px;
-	}
-#video {
-	position: absolute;
-	left: 9%;
-	top: 992px;
-}
-
-	
-}
-
-@media only screen and (max-width : 1200px) {
-
-	#headline{
-	position: absolute;
-	left: 33%;
-	}
-.link_list{
-	font-size: large;
-}
-.node_list{
-	font-size: large;
-}
-.wikipedia_list{
-	font-size: large;
-}
-.academic_list{
-	font-size: large;
-}
-.video_list{
-	font-size: large;
-}
-	
 #my_take {
-	width: 505px;
+	width: 700px;
+	height: 300px;
+	font-size: large;
+	text-align: left;
+	font-family: Century;
+	overflow-y: scroll;
+	position: relative;
+	margin-left: 100px;
+	margin-top: 100px;
+}
+#side_banner {
+	display: none;
+}
+
+
+
+@media (max-width: 1290px){
+#my_take {
+	font-weight: normal;
 	font-size: x-large;
+	position: relative;
+	margin-top: 430px;
 }
-#video_embed {
+#image_1 {
 	position: absolute;
-	right: 0%;
-	top: 1072px;
+	left: 138px;
 }
 
-
-}
-@media only screen and (max-width : 1000px) {
-	#headline{
-		position: absolute;
-		left: 300px
-	}
-	#my_take{
-
-	width: 400px;
-
-	#node_img{
+#related {
 	position: absolute;
-	left: 225px	
-	}
+	top: 235px;
 }
 
-Aenean et purus dapibus, tincidunt neque et, porta eros. Vestibulum blandit pharetra leo. Fusce dignissim eleifend nulla, id rhoncus magna consequat vel. In hac habitasse platea dictumst. Cras ac semper urna. Mauris consectetur purus eget dui tristique commodo. Vivamus lobortis dignissim lorem, quis efficitur tellus eleifend eu. Ut malesuada leo nec lacinia congue. Mauris facilisis scelerisque egestas. Aliquam porttitor augue quis est finibus feugiat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec egestas ex vitae urna malesuada, scelerisque dictum augue suscipit. Phasellus auctor ante sapien, iaculis eleifend eros malesuada vel.
+#side_banner {
+	position: absolute;
+	top: 273px;
+	right: 10px;
+	z-index: -1;
+	display: block;
+}
+#videos {
+	position: relative;
+	float: left;
+	top: 0px;
+	margin-left: 100px;
+}
 
-Mauris rhoncus tellus sit amet mauris euismod, vel imperdiet erat posuere. Pellentesque id tempus ante. Donec viverra blandit sem, eget sagittis ex rutrum eget. Mauris feugiat sed purus vitae auctor. Nam porta finibus odio, at aliquet justo. Aliquam dapibus placerat dolor id cursus. Mauris condimentum, nulla eget efficitur commodo, turpis ipsum auctor elit, sed pharetra libero dolor vel neque. Phasellus vulputate, ligula a aliquet tristique, massa nisl pulvinar sapien, in blandit magna dui non eros. Proin ac arcu sollicitudin, commodo nibh id, blandit ipsum. In aliquet risus vitae est venenatis hendrerit. Etiam pellentesque eu lorem vel elementum. Ut ac magna eget massa dignissim auctor in at elit.
+
+
+}
+
+@media (max-width: 1000px){
+#my_take {
+	width: 485px;
+	font-size: larger;
+}
+.perspective {
+	margin-left: 20px;
+}
+
+
+}
